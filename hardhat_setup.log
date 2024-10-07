@@ -1,0 +1,13 @@
+Error HH24: You are trying to initialize a project but you are not in an interactive shell.
+
+HardhatError: HH24: You are trying to initialize a project but you are not in an interactive shell.
+    at createNewProject (/home/user/node_modules/hardhat/src/internal/cli/cli.ts:470:9)
+    at main (/home/user/node_modules/hardhat/src/internal/cli/cli.ts:169:15)
+    at Object.<anonymous> (/home/user/node_modules/hardhat/src/internal/cli/cli.ts:473:1)
+    at Module._compile (node:internal/modules/cjs/loader:1469:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Module.require (node:internal/modules/cjs/loader:1311:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/home/user/node_modules/hardhat/src/internal/cli/bootstrap.ts:16:1)
