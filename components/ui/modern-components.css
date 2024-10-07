@@ -1,0 +1,36 @@
+
+/* Modern CSS Components */
+
+.button-modern {
+  background-color: #ffffff;
+  color: #4caf50;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-modern:hover {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+.card-modern {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-modern:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.text-modern {
+  color: #4caf50;
+  font-size: 1.2em;
+  transition: color 0.3s ease-in-out;
+}
+
+.text-modern:hover {
+  color: #388e3c;
+}
