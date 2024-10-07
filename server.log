@@ -2,23 +2,47 @@
 > web-app@0.1.0 dev
 > next dev
 
- ⚠ Port 3000 is in use, trying 3001 instead.
- ⚠ Port 3001 is in use, trying 3002 instead.
- ⚠ Port 3002 is in use, trying 3003 instead.
- ⚠ Port 3003 is in use, trying 3004 instead.
   ▲ Next.js 14.2.13
-  - Local:        http://localhost:3004
+  - Local:        http://localhost:3000
 
  ✓ Starting...
- ✓ Ready in 1616ms
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 1743ms
  ○ Compiling / ...
- ✓ Compiled / in 4.8s (567 modules)
- HEAD / 200 in 5029ms
- ✓ Compiled in 451ms (270 modules)
- GET / 200 in 36ms
- ✓ Compiled /favicon.ico in 358ms (310 modules)
- GET /favicon.ico 200 in 468ms
- ✓ Compiled /dashboard in 140ms (313 modules)
- ✓ Compiled /_not-found in 274ms (572 modules)
- GET /dashboard 404 in 97ms
+ ✓ Compiled / in 4.9s (567 modules)
+ HEAD / 200 in 5207ms
+ ✓ Compiled in 482ms (270 modules)
+ GET / 200 in 37ms
+ ✓ Compiled /favicon.ico in 363ms (310 modules)
+ GET /favicon.ico 200 in 477ms
+ GET / 200 in 137ms
+ GET / 200 in 27ms
+ GET / 200 in 26ms
+ GET / 200 in 24ms
+ ✓ Compiled in 574ms (549 modules)
+ HEAD / 200 in 193ms
+ GET / 200 in 26ms
+ GET / 200 in 27ms
+ ✓ Compiled /favicon.ico in 106ms (310 modules)
+ GET /favicon.ico 200 in 210ms
+ ✓ Compiled in 490ms (580 modules)
+ ✓ Compiled in 75ms (256 modules)
+ ✓ Compiled in 236ms (270 modules)
+ ✓ Compiled in 205ms (270 modules)
+ ✓ Compiled in 218ms (270 modules)
+ ✓ Compiled in 177ms (270 modules)
+ ✓ Compiled in 168ms (270 modules)
+ ✓ Compiled in 206ms (270 modules)
+ HEAD / 200 in 178ms
+ GET / 200 in 34ms
+ GET /favicon.ico 200 in 30ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 767ms (569 modules)
+ GET /components 404 in 102ms
  GET /favicon.ico 200 in 20ms
+ GET / 200 in 66ms
+ GET /favicon.ico 200 in 11ms
