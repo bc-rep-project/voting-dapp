@@ -50,6 +50,22 @@
     margin-bottom: 10px;
 }
 
+.next-button {
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    margin: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+}
+
+.next-button:hover {
+    background-color: #218838;
+}
+
 .account {
     font-size: 1.25rem;
     color: #343a40;

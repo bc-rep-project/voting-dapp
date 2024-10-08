@@ -65,3 +65,8 @@ https://nextjs.org/telemetry
  GET /components/connect-wallet 200 in 69ms
  ✓ Compiled /favicon.ico in 133ms (398 modules)
  GET /favicon.ico 200 in 241ms
+ ✓ Compiled in 557ms (847 modules)
+ ✓ Compiled in 450ms (847 modules)
+ GET /components/connect-wallet 200 in 65ms
+ ✓ Compiled /favicon.ico in 105ms (398 modules)
+ GET /favicon.ico 200 in 212ms

@@ -36,6 +36,7 @@ export default function ConnectWallet() {
             {account ? `Connected: ${account}` : "Connect Wallet"}
         </Button>
         {account && <div className="account">Connected: {account}</div>}
+        <Button className="next-button">Next</Button>
     </div>
   );
 }
