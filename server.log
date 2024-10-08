@@ -11,62 +11,37 @@ This information is used to shape Next.js' roadmap and prioritize features.
 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
 https://nextjs.org/telemetry
 
- ✓ Ready in 1708ms
+ ✓ Ready in 1657ms
  ○ Compiling / ...
- ✓ Compiled / in 5.3s (567 modules)
- HEAD / 200 in 5537ms
- GET / 200 in 47ms
- ✓ Compiled /favicon.ico in 330ms (310 modules)
- GET /favicon.ico 200 in 441ms
+ ✓ Compiled / in 5.2s (567 modules)
+ HEAD / 200 in 5482ms
+ GET / 200 in 42ms
  ○ Compiling /components ...
- ✓ Compiled /components in 2.3s (855 modules)
- GET /components 200 in 11ms
- GET /favicon.ico 200 in 76ms
- ✓ Compiled in 437ms (471 modules)
- ✓ Compiled in 521ms (829 modules)
- ✓ Compiled in 333ms (829 modules)
- GET /components 200 in 70ms
- ✓ Compiled /favicon.ico in 124ms (385 modules)
- GET /favicon.ico 200 in 239ms
- ✓ Compiled in 675ms (829 modules)
- GET /components 200 in 72ms
- ✓ Compiled /favicon.ico in 124ms (385 modules)
- GET /favicon.ico 200 in 232ms
- ✓ Compiled /components/connect-wallet in 488ms (822 modules)
- ✓ Compiled /favicon.ico in 110ms (388 modules)
- GET /favicon.ico 200 in 212ms
- ✓ Compiled in 347ms (478 modules)
- GET /components/connect-wallet 200 in 42ms
+ ✓ Compiled /components in 2.7s (829 modules)
+ GET /components 200 in 3070ms
+ ✓ Compiled /favicon.ico in 259ms (385 modules)
+ GET /favicon.ico 200 in 392ms
+ ✓ Compiled /components/connect-wallet in 264ms (856 modules)
+ GET / 200 in 199ms
+ GET /components 200 in 36ms
+ GET /favicon.ico 200 in 21ms
+ GET /favicon.ico 200 in 9ms
+ ✓ Compiled in 629ms (869 modules)
+ GET /components/connect-wallet 200 in 50ms
+ GET /components/connect-wallet 200 in 12ms
  ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
- ✓ Compiled in 528ms (838 modules)
- ✓ Compiled /favicon.ico in 99ms (389 modules)
- GET /favicon.ico 200 in 213ms
- ✓ Compiled in 323ms (869 modules)
- GET /components/connect-wallet 200 in 39ms
- GET /favicon.ico 200 in 67ms
- ○ Compiling /components/register-voter ...
- ✓ Compiled /components/register-voter in 3.6s (1463 modules)
- GET /favicon.ico 200 in 54ms
- GET /favicon.ico 200 in 9ms
- GET / 200 in 152ms
- GET /favicon.ico 200 in 10ms
- GET /components 200 in 12ms
- GET /favicon.ico 200 in 9ms
+ ✓ Compiled in 314ms (614 modules)
+ GET /favicon.ico 200 in 85ms
  GET /favicon.ico 200 in 8ms
- ✓ Compiled in 681ms (847 modules)
- GET /components/connect-wallet 200 in 63ms
- ✓ Compiled /favicon.ico in 124ms (398 modules)
- GET /favicon.ico 200 in 226ms
- ✓ Compiled in 616ms (847 modules)
- GET /components/connect-wallet 200 in 62ms
- ✓ Compiled /favicon.ico in 126ms (398 modules)
- GET /favicon.ico 200 in 227ms
- ✓ Compiled in 674ms (847 modules)
- GET /components/connect-wallet 200 in 69ms
- ✓ Compiled /favicon.ico in 133ms (398 modules)
- GET /favicon.ico 200 in 241ms
- ✓ Compiled in 557ms (847 modules)
- ✓ Compiled in 450ms (847 modules)
- GET /components/connect-wallet 200 in 65ms
- ✓ Compiled /favicon.ico in 105ms (398 modules)
- GET /favicon.ico 200 in 212ms
+ ✓ Compiled / in 361ms (358 modules)
+ GET / 200 in 584ms
+ GET /components 200 in 41ms
+ ✓ Compiled /favicon.ico in 192ms (389 modules)
+ GET /favicon.ico 200 in 296ms
+ GET /favicon.ico 200 in 9ms
+ ✓ Compiled in 491ms (869 modules)
+ GET /components/connect-wallet 200 in 38ms
+ GET /components/connect-wallet 200 in 12ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /favicon.ico 200 in 68ms
+ GET /favicon.ico 200 in 8ms
