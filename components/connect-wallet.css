@@ -25,6 +25,31 @@
     background-color: #0056b3;
 }
 
+.message {
+    text-align: center;
+    font-size: 1rem;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.message h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.message p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+.message p {
+    margin-bottom: 10px;
+}
+
 .account {
     font-size: 1.25rem;
     color: #343a40;

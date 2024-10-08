@@ -48,3 +48,20 @@ https://nextjs.org/telemetry
  ✓ Compiled /components/register-voter in 3.6s (1463 modules)
  GET /favicon.ico 200 in 54ms
  GET /favicon.ico 200 in 9ms
+ GET / 200 in 152ms
+ GET /favicon.ico 200 in 10ms
+ GET /components 200 in 12ms
+ GET /favicon.ico 200 in 9ms
+ GET /favicon.ico 200 in 8ms
+ ✓ Compiled in 681ms (847 modules)
+ GET /components/connect-wallet 200 in 63ms
+ ✓ Compiled /favicon.ico in 124ms (398 modules)
+ GET /favicon.ico 200 in 226ms
+ ✓ Compiled in 616ms (847 modules)
+ GET /components/connect-wallet 200 in 62ms
+ ✓ Compiled /favicon.ico in 126ms (398 modules)
+ GET /favicon.ico 200 in 227ms
+ ✓ Compiled in 674ms (847 modules)
+ GET /components/connect-wallet 200 in 69ms
+ ✓ Compiled /favicon.ico in 133ms (398 modules)
+ GET /favicon.ico 200 in 241ms
