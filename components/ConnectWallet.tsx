@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import web3 from "../utils/web3";
+import "@/components/connect-wallet.css";
 import { Button } from "@/components/ui/button";
 
 export default function ConnectWallet() {
@@ -22,10 +23,11 @@ export default function ConnectWallet() {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <Button onClick={connectWallet} className="mb-4">
-        {account ? `Connected: ${account}` : "Connect Wallet"}
-      </Button>
+    <div className="container">
+        <Button onClick={connectWallet} className="button">
+            {account ? `Connected: ${account}` : "Connect Wallet"}
+        </Button>
+        {account && <div className="account">Connected: {account}</div>}
     </div>
   );
 }
