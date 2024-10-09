@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 import web3 from "../utils/web3";
-import "@/components/connect-wallet.css";
+import "@/components/styles/ConnectWallet.css";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

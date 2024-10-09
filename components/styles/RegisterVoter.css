@@ -1,0 +1,97 @@
+
+.register-voter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-voter-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.register-voter-label {
+    font-size: 1rem;
+    color: #555;
+}
+
+.register-voter-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.register-voter-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-voter-button:hover {
+    background-color: #0056b3;
+}
+
+.register-voter-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.register-voter-nav-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-voter-nav-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .register-voter-title {
+        font-size: 1.5rem;
+    }
+
+    .register-voter-button,
+    .register-voter-nav-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-voter-title {
+        font-size: 1.2rem;
+    }
+
+    .register-voter-button,
+    .register-voter-nav-button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}

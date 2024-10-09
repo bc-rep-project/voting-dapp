@@ -4,7 +4,7 @@
 import { useState } from "react";
 import web3 from "../utils/web3";
 import { Button } from "@/components/ui/button";
-import "@/components/RegisterVoter.css"; // Import custom CSS
+import "@/components/styles/RegisterVoter.css"; // Import custom CSS
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Voting from "../contracts/Voting.json"; // Assuming ABI is available
