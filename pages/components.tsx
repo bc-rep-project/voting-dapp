@@ -1,11 +1,9 @@
 
-
 import Dashboard from "@/components/Dashboard";
 
 export default function ComponentsPage() {
   return (
-    <div className="container">
-
+    <div>
         <Dashboard />
     </div>
   );

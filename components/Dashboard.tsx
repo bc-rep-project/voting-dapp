@@ -7,7 +7,7 @@ import "@/components/styles/Dashboard.css";
 
 export default function Dashboard() {
   return (
-     <div className="dashboard-container">
+<div className="dashboard-container">
        <h1 className="dashboard-title">Dashboard</h1>
        <Link href="/components/connect-wallet">
          <Button className="dashboard-button">Connect Wallet</Button>
