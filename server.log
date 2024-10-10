@@ -51,3 +51,20 @@ https://nextjs.org/telemetry
  GET /components/display-results 200 in 118ms
  ✓ Compiled /favicon.ico in 137ms (393 modules)
  GET /favicon.ico 200 in 247ms
+ ✓ Compiled in 900ms (1434 modules)
+ GET /components/display-results 200 in 79ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /favicon.ico in 110ms (393 modules)
+ GET /favicon.ico 200 in 220ms
+ ✓ Compiled in 548ms (1465 modules)
+ GET /components/display-results 200 in 37ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 427ms (1465 modules)
+ ✓ Compiled in 395ms (1465 modules)
+ GET /components/display-results 200 in 37ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 390ms (1465 modules)
+ GET /favicon.ico 200 in 66ms
+ ✓ Compiled in 857ms (1465 modules)
+ GET /components/display-results 200 in 25ms
+ GET /favicon.ico 200 in 52ms

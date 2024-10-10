@@ -10,9 +10,17 @@ import Voting from "../contracts/Voting.json"; // Assuming ABI is available
 
 export default function DisplayResults() {
   const [results, setResults] = useState([]);
+  const [error, setError] = useState(null);
 
   const tallyVotes = async () => {
-    const accounts = await web3.eth.getAccounts();
+    let accounts;
+    try {
+      accounts = await web3.eth.getAccounts();
+    } catch (error) {
+      console.error("Error fetching accounts:", error);
+      setError("Error fetching accounts. Please check your connection and try again.");
+      return;
+    }
     const contract = new web3.eth.Contract(Voting.abi, "0x5FbDB2315678afecb367f032d93F642f64180aa3"); // Replace with your contract address
 
     try {
@@ -27,7 +35,7 @@ export default function DisplayResults() {
       setResults(mockResults);
     } catch (error) {
       console.error("Error tallying votes:", error);
-      alert("Error tallying votes. See console for details.");
+      setError("Error tallying votes. See console for details.");
     }
   };
 
@@ -35,6 +43,7 @@ export default function DisplayResults() {
     <div className="container">
       <h2 className="title">Election Results</h2>
       
+      {error && <div className="error-message">{error}</div>}
       <Button onClick={tallyVotes} className="button">Tally Votes</Button>
       <Link href="/components/voting-interface">
         <Button className="back-button">Back</Button>
