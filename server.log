@@ -28,7 +28,8 @@
  GET /favicon.ico 200 in 66ms
  ○ Compiling /components/voting-interface ...
  ✓ Compiled /components/voting-interface in 864ms (1544 modules ✓ Compiled in 504ms (1072 modules)
-ompiling /components/display-results ...
+ ✓ Compiled in 369ms (1072 modules)
+..
  ✓ Compiled /components/display-results in 616ms (1539 modules)
  GET /favicon.ico 200 in 77ms
  GET /favicon.ico 200 in 11ms
@@ -38,3 +39,11 @@ ompiling /components/display-results ...
  GET /favicon.ico 200 in 11ms
  ✓ Compiled in 945ms (1509 modules)
  GET /components/voting-interface 200 in 823ms
+ ✓ Compiled /favicon.ico in 109ms (403 modules)
+ GET /favicon.ico 200 in 207ms
+ GET /components/voting-interface 200 in 56ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/user/voting-dapp/.next/cache/webpack/client-development/1.pack.gz_' -> '/home/user/voting-dapp/.next/cache/webpack/client-development/1.pack.gz'
+ GET /favicon.ico 200 in 19ms
+ ✓ Compiled in 792ms (1509 modules)
+ GET /components/voting-interface 200 in 74ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload

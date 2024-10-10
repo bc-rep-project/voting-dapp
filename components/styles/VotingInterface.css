@@ -1,87 +1,55 @@
 
 /* VotingInterface.css */
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
-  margin: 0;
-  padding: 0;
-}
-
 form {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   max-width: 400px;
-  margin: 40px auto;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 1.75rem;
   font-weight: bold;
   text-align: center;
-  color: #333333;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
-.select-trigger {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  background-color: #ffffff;
-  cursor: pointer;
-  margin-bottom: 10px;
+.space-y-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.select-content {
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  max-height: 200px;
-  overflow-y: auto;
+.space-y-6 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.select-item {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.select-item:hover {
-  background-color: #f0f0f0;
-}
-
-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: #ffffff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Additional styles for Next and Back buttons */
 .nav-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  gap: 1rem;
 }
 
-.nav-buttons button {
-  width: 48%;
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
   background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.nav-buttons button:hover {
+button:hover {
   background-color: #0056b3;
 }
