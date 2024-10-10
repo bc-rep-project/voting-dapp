@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Voting from "../contracts/Voting.json"; // Assuming ABI is available
 import "../components/styles/VotingInterface.css";
+import Link from "next/link";
 
 const candidates = [
   { id: "1", name: "Alice" },
@@ -57,8 +58,12 @@ export default function VotingInterface() {
       <Button type="submit" className="w-full">Vote</Button>
 
       <div className="nav-buttons">
-        <button type="button">Back</button>
-        <button type="button">Next</button>
+<Link href="/components/register-voter">
+  <Button type="button">Back</Button>
+</Link>
+<Link href="/components/display-results">
+  <Button type="button">Next</Button>
+</Link>
       </div>
     </form>
   );

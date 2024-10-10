@@ -4,6 +4,7 @@
 import { useState } from "react";
 import web3 from "../utils/web3";
 import { Button } from "@/components/ui/button";
+import "@/components/styles/DisplayResults.css";
 import Voting from "../contracts/Voting.json"; // Assuming ABI is available
 
 export default function DisplayResults() {
