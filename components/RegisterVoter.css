@@ -1,28 +1,28 @@
 
-/* RegisterVoter.css */
-.register-voter-form {
+/* New styles for RegisterVoter component */
+.register-voter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.register-voter-title {
+.register-voter-header {
+  font-size: 24px;
+  font-weight: bold;
   color: #333;
   margin-bottom: 20px;
 }
 
-.register-voter-label {
-  color: #666;
-  font-weight: bold;
-}
-
 .register-voter-input {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 .register-voter-button {
@@ -30,7 +30,7 @@
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -42,6 +42,7 @@
 .register-voter-nav {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   margin-top: 20px;
 }
 
@@ -50,7 +51,7 @@
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }

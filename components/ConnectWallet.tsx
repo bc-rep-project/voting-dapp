@@ -39,7 +39,7 @@ export default function ConnectWallet() {
         {account && <div className="account">Connected: {account}</div>}
         <Link href="/components/register-voter">
           <div className="w-full flex justify-end">
-              <Button className="px-6 py-3 text-lg bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition-all duration-300">Next</Button>
+<Button className="button">Next</Button>
           </div>
         </Link>
 
