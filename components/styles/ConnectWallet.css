@@ -1,88 +1,90 @@
 
+/* ConnectWallet.css */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    transition: all 0.5s ease-in-out;
-    box-sizing: border-box;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .message {
-    max-width: 600px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .message h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+  color: #333;
 }
 
 .message p {
-    font-size: 1rem;
-    margin-bottom: 10px;
+  color: #666;
+  line-height: 1.6;
 }
 
 .button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 10px 0;
-    width: 80%;
-    max-width: 300px;
-    text-align: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .account {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #fff;
+  margin-top: 10px;
+  color: #007bff;
 }
 
-@media (max-width: 768px) {
-    .message h2 {
-        font-size: 1.5rem;
-    }
-
-    .message p {
-        font-size: 0.9rem;
-    }
-
-    .button {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
+.w-full {
+  width: 100%;
 }
 
-@media (max-width: 480px) {
-    .message h2 {
-        font-size: 1.2rem;
-    }
+.flex {
+  display: flex;
+}
 
-    .message p {
-        font-size: 0.8rem;
-    }
+.justify-end {
+  justify-content: flex-end;
+}
 
-    .button {
-        font-size: 0.9rem;
-        padding: 6px 12px;
-    }
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.bg-blue-500 {
+  background-color: #007bff;
+}
+
+.text-white {
+  color: white;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.hover\:bg-blue-700:hover {
+  background-color: #0056b3;
+}
+
+.transition-all {
+  transition: all 0.3s;
+}
+
+.duration-300 {
+  transition-duration: 0.3s;
 }
