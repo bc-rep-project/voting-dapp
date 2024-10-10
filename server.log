@@ -29,8 +29,8 @@
  ○ Compiling /components/voting-interface ...
  ✓ Compiled /components/voting-interface in 864ms (1544 modules ✓ Compiled in 504ms (1072 modules)
  ✓ Compiled in 369ms (1072 modules)
-..
- ✓ Compiled /components/display-results in 616ms (1539 modules)
+ ✓ Compiled in 470ms (1072 modules)
+esults in 616ms (1539 modules)
  GET /favicon.ico 200 in 77ms
  GET /favicon.ico 200 in 11ms
  GET /favicon.ico 200 in 11ms
@@ -47,3 +47,6 @@
  ✓ Compiled in 792ms (1509 modules)
  GET /components/voting-interface 200 in 74ms
  ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /favicon.ico in 130ms (403 modules)
+ GET /favicon.ico 200 in 232ms
+ ✓ Compiled in 846ms (1509 modules)

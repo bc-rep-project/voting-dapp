@@ -53,3 +53,35 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+/* Dropdown styles */
+.select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.select-content {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.select-item {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+.select-item:hover {
+  background-color: #f1f1f1;
+}
