@@ -24,6 +24,9 @@ export default function Dashboard() {
        <Link href="/components/view-voter">
          <Button className="dashboard-button">View Voter</Button>
        </Link>
+       <Link href="/app/view-all-voters">
+         <Button className="dashboard-button">View All Voters</Button>
+       </Link>
      </div>
   );
 }

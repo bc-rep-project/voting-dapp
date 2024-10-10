@@ -37,33 +37,33 @@ export default function VotingInterface() {
   };
 
   return (
-    <form onSubmit={castVote} className="space-y-6 max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold text-center mb-6">Cast Your Vote</h2>
+      <form onSubmit={castVote} className="form">
+      <h2 className="title">Cast Your Vote</h2>
       
       <div className="space-y-2">
         <Select onValueChange={(value) => setSelectedCandidate(value)}>
-          <SelectTrigger>
-            <SelectValue placeholder="Select a candidate" />
-          </SelectTrigger>
-          <SelectContent>
-            {candidates.map((candidate) => (
-              <SelectItem key={candidate.id} value={candidate.id}>
-                {candidate.name}
-              </SelectItem>
-            ))}
-          </SelectContent>
+        <SelectTrigger className="select-trigger">
+          <SelectValue placeholder="Select a candidate" />
+        </SelectTrigger>
+        <SelectContent className="select-content">
+          {candidates.map((candidate) => (
+            <SelectItem key={candidate.id} value={candidate.id} className="select-item">
+              {candidate.name}
+            </SelectItem>
+          ))}
+        </SelectContent>
         </Select>
       </div>
       
-      <Button type="submit" className="w-full">Vote</Button>
-
-      <div className="nav-buttons">
-<Link href="/components/register-voter">
-  <Button type="button">Back</Button>
-</Link>
-<Link href="/components/display-results">
-  <Button type="button">Next</Button>
-</Link>
+       <Button type="submit" className="button">Vote</Button>
+ 
+       <div className="nav-buttons">
+ <Link href="/components/register-voter">
+   <Button type="button" className="button">Back</Button>
+ </Link>
+ <Link href="/components/display-results">
+   <Button type="button" className="button">Next</Button>
+ </Link>
       </div>
     </form>
   );

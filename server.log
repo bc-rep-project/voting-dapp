@@ -11,60 +11,124 @@ This information is used to shape Next.js' roadmap and prioritize features.
 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
 https://nextjs.org/telemetry
 
- ✓ Ready in 1758ms
+ ✓ Ready in 1704ms
  ○ Compiling / ...
- ✓ Compiled / in 5.3s (567 modules)
- HEAD / 200 in 5592ms
- ✓ Compiled in 393ms (270 modules)
- ✓ Compiled in 306ms (270 modules)
- ✓ Compiled in 261ms (270 modules)
- GET / 200 in 132ms
- ✓ Compiled /favicon.ico in 391ms (310 modules)
- GET /favicon.ico 200 in 506ms
+ ✓ Compiled / in 5.1s (567 modules)
+ HEAD / 200 in 5378ms
+ GET / 200 in 82ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 825ms (310 modules)
+ GET /favicon.ico 200 in 1025ms
  ○ Compiling /components ...
- ✓ Compiled /components in 2.1s (849 modules)
- GET /components 200 in 12ms
- GET /favicon.ico 200 in 68ms
+ ✓ Compiled /components in 2.3s (862 modules)
+ GET /components 200 in 11ms
+ GET /favicon.ico 200 in 71ms
+ GET / 200 in 151ms
+ GET /favicon.ico 200 in 14ms
+ GET /favicon.ico 200 in 10ms
+ GET /components 200 in 14ms
+ ○ Compiling /components/connect-wallet ...
+ ✓ Compiled /components/connect-wallet in 542ms (858 modules)
+ ✓ Compiled /_not-found in 301ms (830 modules)
+ GET /_next/static/chunks/pages/app/view-all-voters.js 404 in 506ms
+ GET /app/view-all-voters 404 in 24ms
+ GET /components 200 in 44ms
+ GET /_next/static/chunks/pages/components/view-voter.js 404 in 28ms
+ GET /components/view-voter 404 in 23ms
+ GET /components 200 in 18ms
  ○ Compiling /components/display-results ...
- ✓ Compiled /components/display-results in 3.2s (1452 modules)
- GET /favicon.ico 200 in 73ms
- ✓ Compiled in 526ms (1465 modules)
- GET /components/display-results 200 in 583ms
+ ✓ Compiled /components/display-results in 3.3s (1433 modules)
+ ○ Compiling /components/voting-interface ...
+ ✓ Compiled /components/voting-interface in 1447ms (1502 modules)
+ ✓ Compiled in 1178ms (1506 modules)
+ GET /components/voting-interface 200 in 764ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 615ms (400 modules)
+ GET /favicon.ico 200 in 760ms
+ ✓ Compiled in 727ms (1537 modules)
+ GET /components/voting-interface 200 in 48ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 485ms (1537 modules)
+ GET /favicon.ico 200 in 72ms
+ ✓ Compiled in 590ms (1537 modules)
+ GET /components/voting-interface 200 in 71ms
+ HEAD /components/voting-interface 200 in 17ms
  GET /favicon.ico 200 in 51ms
- ✓ Compiled in 796ms (1434 modules)
- GET /components/display-results 200 in 80ms
- ✓ Compiled /favicon.ico in 223ms (393 modules)
- GET /favicon.ico 200 in 335ms
- GET /favicon.ico 200 in 22ms
  GET /favicon.ico 200 in 9ms
- ✓ Compiled in 792ms (1434 modules)
- ✓ Compiled in 479ms (1434 modules)
- GET /components/display-results 200 in 75ms
- ✓ Compiled /favicon.ico in 129ms (393 modules)
- GET /favicon.ico 200 in 233ms
- ✓ Compiled in 832ms (1434 modules)
- GET /components/display-results 200 in 78ms
- ✓ Compiled /favicon.ico in 105ms (393 modules)
- GET /favicon.ico 200 in 215ms
- ✓ Compiled in 833ms (1434 modules)
- ✓ Compiled in 733ms (1434 modules)
- GET /components/display-results 200 in 118ms
- ✓ Compiled /favicon.ico in 137ms (393 modules)
- GET /favicon.ico 200 in 247ms
- ✓ Compiled in 900ms (1434 modules)
- GET /components/display-results 200 in 79ms
+ ○ Compiling /components/register-voter ...
+ ✓ Compiled /components/register-voter in 1345ms (1539 modules)
+ GET /favicon.ico 200 in 61ms
+ GET /favicon.ico 200 in 9ms
+ ✓ Compiled in 829ms (1512 modules)
+ GET /components/voting-interface 200 in 86ms
+ GET /components/voting-interface 200 in 12ms
  ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
- ✓ Compiled /favicon.ico in 110ms (393 modules)
- GET /favicon.ico 200 in 220ms
- ✓ Compiled in 548ms (1465 modules)
- GET /components/display-results 200 in 37ms
+ ✓ Compiled /favicon.ico in 127ms (403 modules)
+ GET /favicon.ico 200 in 234ms
+ GET /favicon.ico 200 in 8ms
+ ✓ Compiled in 753ms (1512 modules)
+ GET /components/voting-interface 200 in 81ms
+ ✓ Compiled /favicon.ico in 107ms (403 modules)
+ GET /favicon.ico 200 in 216ms
+ GET /components/voting-interface 200 in 35ms
+ GET /favicon.ico 200 in 7ms
+ ✓ Compiled in 738ms (1512 modules)
+ GET /components/voting-interface 200 in 69ms
+ GET /components/voting-interface 200 in 11ms
+ ✓ Compiled /favicon.ico in 107ms (403 modules)
+ GET /favicon.ico 200 in 210ms
+ GET /favicon.ico 200 in 9ms
+ HEAD /components/voting-interface 200 in 51ms
+ GET /components/voting-interface 200 in 18ms
+ ✓ Compiled in 763ms (1512 modules)
+ GET /components/voting-interface 200 in 72ms
+ GET /components/voting-interface 200 in 15ms
+ GET /components/voting-interface 200 in 13ms
  ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
- ✓ Compiled in 427ms (1465 modules)
- ✓ Compiled in 395ms (1465 modules)
- GET /components/display-results 200 in 37ms
+ ✓ Compiled /favicon.ico in 106ms (403 modules)
+ GET /favicon.ico 200 in 209ms
+ GET /favicon.ico 200 in 8ms
+ GET /components/voting-interface 200 in 35ms
+ GET /favicon.ico 200 in 9ms
+ ✓ Compiled in 680ms (1512 modules)
+ GET /components/voting-interface 200 in 92ms
+ GET /components/voting-interface 200 in 12ms
+ ✓ Compiled /favicon.ico in 116ms (403 modules)
+ GET /favicon.ico 200 in 219ms
+ ✓ Compiled in 715ms (1512 modules)
+ GET /components/voting-interface 200 in 68ms
+ GET /components/voting-interface 200 in 12ms
  ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
- ✓ Compiled in 390ms (1465 modules)
- GET /favicon.ico 200 in 66ms
- ✓ Compiled in 857ms (1465 modules)
- GET /components/display-results 200 in 25ms
+ ✓ Compiled /favicon.ico in 107ms (403 modules)
+ GET /favicon.ico 200 in 205ms
+ ✓ Compiled in 768ms (1512 modules)
+ GET /components/voting-interface 200 in 72ms
+ GET /components/voting-interface 200 in 12ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /favicon.ico in 103ms (403 modules)
+ GET /favicon.ico 200 in 203ms
+ GET /favicon.ico 200 in 11ms
+ ○ Compiling /components/connect-wallet ...
+ ✓ Compiled /components/connect-wallet in 1304ms (1539 modules)
+ GET /favicon.ico 200 in 67ms
+ GET /favicon.ico 200 in 9ms
+ GET /favicon.ico 200 in 8ms
+ GET /favicon.ico 200 in 9ms
+ GET / 200 in 136ms
+ GET /favicon.ico 200 in 9ms
+ ✓ Compiled /components in 313ms (1544 modules)
+ GET /components 200 in 12ms
+ GET /favicon.ico 200 in 60ms
+ ✓ Compiled /components/display-results in 404ms (1553 modules)
  GET /favicon.ico 200 in 52ms
+ GET /favicon.ico 200 in 19ms
+ GET /favicon.ico 200 in 11ms
+ GET /favicon.ico 200 in 11ms
+ GET /favicon.ico 200 in 10ms
+ GET /favicon.ico 200 in 10ms
+ GET /favicon.ico 200 in 14ms
+ GET /favicon.ico 200 in 11ms
+ GET /favicon.ico 200 in 10ms
+ GET /favicon.ico 200 in 11ms
+ GET /favicon.ico 200 in 10ms
+ GET /favicon.ico 200 in 9ms
