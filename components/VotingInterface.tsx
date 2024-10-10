@@ -6,6 +6,7 @@ import web3 from "../utils/web3";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Voting from "../contracts/Voting.json"; // Assuming ABI is available
+import "../components/styles/VotingInterface.css";
 
 const candidates = [
   { id: "1", name: "Alice" },
@@ -25,7 +26,9 @@ export default function VotingInterface() {
       const voterId = web3.utils.keccak256(accounts[0]);
       const encryptedVote = web3.utils.asciiToHex(selectedCandidate);
       await contract.methods.castVote(voterId, encryptedVote).send({ from: accounts[0] });
-      alert("Vote cast successfully!");
+      console.log("Vote cast successfully by:", accounts[0]);
+      console.log("Selected candidate:", selectedCandidate);
+      alert(`Vote cast successfully!\nVoter: ${accounts[0]}\nCandidate: ${selectedCandidate}`);
     } catch (error) {
       console.error("Error casting vote:", error);
       alert("Error casting vote. See console for details.");
@@ -52,6 +55,11 @@ export default function VotingInterface() {
       </div>
       
       <Button type="submit" className="w-full">Vote</Button>
+
+      <div className="nav-buttons">
+        <button type="button">Back</button>
+        <button type="button">Next</button>
+      </div>
     </form>
   );
 }
