@@ -57,7 +57,7 @@ export default function VotingInterface() {
       
        <Button type="submit" className="button">Vote</Button>
  
-       <div className="nav-buttons">
+       <div>
  <Link href="/components/register-voter">
    <Button type="button" className="button">Back</Button>
  </Link>

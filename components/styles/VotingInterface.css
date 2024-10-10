@@ -5,19 +5,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  margin: auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  max-width: 450px;
+  margin: 40px auto;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .space-y-2 > * + * {
@@ -26,10 +29,15 @@
 
 .select-trigger {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+
+.select-trigger:hover {
+  background-color: #e0e0e0;
 }
 
 .select-content {
@@ -49,14 +57,19 @@
 }
 
 .button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   margin-top: 20px;
   border: none;
-  border-radius: 4px;
-  background-color: #0070f3;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #0070f3, #005bb5);
   color: #fff;
   cursor: pointer;
   width: 100%;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #005bb5, #003f7f);
 }
 
 .button:hover {
@@ -72,4 +85,12 @@
 
 .nav-buttons .button {
   width: 48%;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #0070f3, #005bb5);
+  transition: background 0.3s ease;
+}
+
+.nav-buttons .button:hover {
+  background: linear-gradient(135deg, #005bb5, #003f7f);
 }
