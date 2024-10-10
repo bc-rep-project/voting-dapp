@@ -23,8 +23,8 @@
  ✓ Compiled in 396ms (270 modules)
  ✓ Compiled in 265ms (270 modules)
  ✓ Compiled in 215ms (270 modules)
-terface in 833ms (1529 modules)
- GET /favicon.ico 200 in 53ms
+ ✓ Compiled in 412ms (270 modules)
+/favicon.ico 200 in 53ms
  ○ Compiling /components/register-voter ...
  ✓ Compiled /components/register-voter in 510ms (1544 modules)
  GET /favicon.ico 200 in 54ms
@@ -63,5 +63,16 @@ terface in 833ms (1529 modules)
  ✓ Compiled in 458ms (1175 modules)
 Could not find files for /components/connect-wallet in .next/build-manifest.json
 Could not find files for /components/connect-wallet in .next/build-manifest. ✓ Compiled in 351ms (1137 modules)
-00 in 42ms
- ✓ Compiled in 511ms (1175 modules)
+ ✓ Compiled in 831ms (1506 modules)
+5 modules)
+ ✓ Compiled /favicon.ico in 59ms (145 modules)
+ GET /favicon.ico 200 in 145ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1521ms (1405 modules)
+ GET /_next/static/webpack/08a67fa17d959268.webpack.hot-update.json 404 in 1745ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /components/connect-wallet 200 in 34ms
+ GET /favicon.ico 200 in 20ms
+ ✓ Compiled in 624ms (1076 modules)
+ ✓ Compiled /_not-found in 329ms (1374 modules)
+ GET /components/connect-wallet 404 in 553ms
