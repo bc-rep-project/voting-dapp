@@ -38,7 +38,7 @@ export default function ConnectWallet() {
         </Button>
         {account && <div className="account">Connected: {account}</div>}
         <Link href="/components/register-voter">
-          <div className="w-full flex justify-end">
+          <div className="next-button-container">
 <Button className="button">Next</Button>
           </div>
         </Link>

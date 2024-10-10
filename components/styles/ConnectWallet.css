@@ -17,6 +17,13 @@
   margin-bottom: 20px;
 }
 
+.next-button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 20px;
+}
+
 .message h2 {
   color: #333;
 }
