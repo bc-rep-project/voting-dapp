@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import web3 from "../utils/web3";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import "@/components/styles/DisplayResults.css";
 import Voting from "../contracts/Voting.json"; // Assuming ABI is available
@@ -31,20 +32,13 @@ export default function DisplayResults() {
   };
 
   return (
-    <div className="space-y-6 max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold text-center mb-6">Election Results</h2>
+    <div className="container">
+      <h2 className="title">Election Results</h2>
       
-      <Button onClick={tallyVotes} className="w-full mb-4">Tally Votes</Button>
-      
-      {results.length > 0 && (
-        <div>
-          {results.map((result, index) => (
-            <div key={index} className="mb-2">
-              <strong>{result.candidate}:</strong> {result.votes} votes
-            </div>
-          ))}
-        </div>
-      )}
+      <Button onClick={tallyVotes} className="button">Tally Votes</Button>
+      <Link href="/components/voting-interface">
+        <Button className="back-button">Back</Button>
+      </Link>
     </div>
   );
 }

@@ -11,34 +11,43 @@ This information is used to shape Next.js' roadmap and prioritize features.
 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
 https://nextjs.org/telemetry
 
- ✓ Ready in 1789ms
+ ✓ Ready in 1758ms
  ○ Compiling / ...
- ✓ Compiled / in 5s (567 modules)
- HEAD / 200 in 5318ms
- GET / 200 in 35ms
- ✓ Compiled /favicon.ico in 335ms (310 modules)
- GET /favicon.ico 200 in 450ms
+ ✓ Compiled / in 5.3s (567 modules)
+ HEAD / 200 in 5592ms
+ ✓ Compiled in 393ms (270 modules)
+ ✓ Compiled in 306ms (270 modules)
+ ✓ Compiled in 261ms (270 modules)
+ GET / 200 in 132ms
+ ✓ Compiled /favicon.ico in 391ms (310 modules)
+ GET /favicon.ico 200 in 506ms
  ○ Compiling /components ...
- ✓ Compiled /components in 2.5s (862 modules)
+ ✓ Compiled /components in 2.1s (849 modules)
  GET /components 200 in 12ms
- GET /favicon.ico 200 in 89ms
- ○ Compiling /components/register-voter ...
- ✓ Compiled /components/register-voter in 3.1s (1459 modules)
- GET /favicon.ico 200 in 70ms
- ✓ Compiled /components/connect-wallet in 316ms (1468 modules)
- GET /favicon.ico 200 in 56ms
+ GET /favicon.ico 200 in 68ms
+ ○ Compiling /components/display-results ...
+ ✓ Compiled /components/display-results in 3.2s (1452 modules)
+ GET /favicon.ico 200 in 73ms
+ ✓ Compiled in 526ms (1465 modules)
+ GET /components/display-results 200 in 583ms
+ GET /favicon.ico 200 in 51ms
+ ✓ Compiled in 796ms (1434 modules)
+ GET /components/display-results 200 in 80ms
+ ✓ Compiled /favicon.ico in 223ms (393 modules)
+ GET /favicon.ico 200 in 335ms
+ GET /favicon.ico 200 in 22ms
  GET /favicon.ico 200 in 9ms
- ✓ Compiled in 813ms (1445 modules)
- HEAD /components/register-voter 200 in 695ms
- GET /components/register-voter 200 in 11ms
- ✓ Compiled /favicon.ico in 262ms (400 modules)
- GET /favicon.ico 200 in 373ms
- GET /favicon.ico 200 in 9ms
- GET /favicon.ico 200 in 8ms
- ✓ Compiled in 824ms (1445 modules)
- GET /components/register-voter 200 in 84ms
- ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
- HEAD /components/connect-wallet 200 in 13ms
- ✓ Compiled /favicon.ico in 133ms (400 modules)
- GET /favicon.ico 200 in 252ms
- GET /favicon.ico 200 in 10ms
+ ✓ Compiled in 792ms (1434 modules)
+ ✓ Compiled in 479ms (1434 modules)
+ GET /components/display-results 200 in 75ms
+ ✓ Compiled /favicon.ico in 129ms (393 modules)
+ GET /favicon.ico 200 in 233ms
+ ✓ Compiled in 832ms (1434 modules)
+ GET /components/display-results 200 in 78ms
+ ✓ Compiled /favicon.ico in 105ms (393 modules)
+ GET /favicon.ico 200 in 215ms
+ ✓ Compiled in 833ms (1434 modules)
+ ✓ Compiled in 733ms (1434 modules)
+ GET /components/display-results 200 in 118ms
+ ✓ Compiled /favicon.ico in 137ms (393 modules)
+ GET /favicon.ico 200 in 247ms
