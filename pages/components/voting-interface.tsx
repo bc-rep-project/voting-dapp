@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function VotingInterfacePage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 space-y-4">
+<div>
       <VotingInterface />
 
     </div>

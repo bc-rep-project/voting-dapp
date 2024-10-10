@@ -27,8 +27,14 @@
  ✓ Compiled /components/register-voter in 3s (1468 modules)
  GET /favicon.ico 200 in 66ms
  ○ Compiling /components/voting-interface ...
- ✓ Compiled /components/voting-interface in 864ms (1544 modules)
- GET /favicon.ico 200 in 56ms
- ○ Compiling /components/display-results ...
+ ✓ Compiled /components/voting-interface in 864ms (1544 modules ✓ Compiled in 504ms (1072 modules)
+ompiling /components/display-results ...
  ✓ Compiled /components/display-results in 616ms (1539 modules)
  GET /favicon.ico 200 in 77ms
+ GET /favicon.ico 200 in 11ms
+ GET /favicon.ico 200 in 11ms
+ GET /favicon.ico 200 in 9ms
+ GET /favicon.ico 200 in 11ms
+ GET /favicon.ico 200 in 11ms
+ ✓ Compiled in 945ms (1509 modules)
+ GET /components/voting-interface 200 in 823ms
