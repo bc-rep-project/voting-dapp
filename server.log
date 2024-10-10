@@ -20,8 +20,8 @@
  ✓ Compiled in 314ms (270 modules)
  ✓ Compiled in 213ms (270 modules)
  ✓ Compiled in 324ms (270 modules)
-ET /favicon.ico 200 in 66ms
- ○ Compiling /components/voting-interface ...
+ ✓ Compiled in 396ms (270 modules)
+iling /components/voting-interface ...
  ✓ Compiled /components/voting-interface in 833ms (1529 modules)
  GET /favicon.ico 200 in 53ms
  ○ Compiling /components/register-voter ...
@@ -49,7 +49,12 @@ ET /favicon.ico 200 in 66ms
  GET /favicon.ico 200 in 80ms
  ✓ Compiled in 739ms (1178 modules)
  GET /components/register-voter 200 in 739ms
- no such file or directory, rename '/home/user/voting-dapp/.next/cache/webpack/client-development/1.pack.gz_' -> '/home/user/voting-dapp/.next/cache/webpack/client-development/1.pack.gz'
- ✓ Compiled in 600ms (1137 modules)
- ✓ Compiled in 316ms (1137 modules)
- ✓ Compiled in 598ms (1137 modules)
+ ✓ Compiled /favicon.ico in 197ms (148 modules)
+ GET /favicon.ico 200 in 275ms
+ ✓ Compiled /components/connect-wallet in 345ms (1220 modules)
+ GET /favicon.ico 200 in 67ms
+ ✓ Compiled in 790ms (1175 modules)
+ GET /components/connect-wallet 200 in 52ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ror: ENOENT: no such file or directory, rename '/home/user/voting-dapp/.next/cache/webpack/client-development/1.pack.gz_' -> '/home/user/voting-dapp/.next/cache/webpack/client-development/1.pack.gz'
+ ✓ Compiled in 672ms (1137 modules)
