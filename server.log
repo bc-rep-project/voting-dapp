@@ -11,16 +11,24 @@ This information is used to shape Next.js' roadmap and prioritize features.
 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
 https://nextjs.org/telemetry
 
- ✓ Ready in 1810ms
+ ✓ Ready in 1752ms
  ○ Compiling / ...
- ✓ Compiled / in 5s (567 modules)
- HEAD / 200 in 5223ms
- GET / 200 in 40ms
+ ✓ Compiled / in 4.9s (567 modules)
+ HEAD / 200 in 5165ms
+ GET / 200 in 46ms
+ ✓ Compiled /favicon.ico in 429ms (310 modules)
+ GET /favicon.ico 200 in 542ms
+ GET / 200 in 158ms
+ ✓ Compiled in 354ms (270 modules)
+ GET /favicon.ico 200 in 17ms
  ○ Compiling /components ...
- ✓ Compiled /components in 2.6s (831 modules)
- GET /components 200 in 2961ms
- ✓ Compiled /favicon.ico in 266ms (386 modules)
- GET /favicon.ico 200 in 396ms
+ ✓ Compiled /components in 2.5s (849 modules)
+ GET /components 200 in 14ms
+ GET /favicon.ico 200 in 74ms
  ○ Compiling /components/voting-interface ...
  ✓ Compiled /components/voting-interface in 3.9s (1520 modules)
- GET /favicon.ico 200 in 81ms
+ GET /favicon.ico 200 in 71ms
+ ✓ Compiled in 916ms (1502 modules)
+ GET /components/voting-interface 200 in 780ms
+ ✓ Compiled /favicon.ico in 122ms (396 modules)
+ GET /favicon.ico 200 in 233ms
