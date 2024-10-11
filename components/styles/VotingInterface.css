@@ -45,3 +45,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+.button-spacing {
+    margin-right: 40px; /* Adjust the margin as needed */
+}

@@ -38,3 +38,21 @@ https://nextjs.org/telemetry
  GET /favicon.ico 200 in 226ms
  GET /favicon.ico 200 in 8ms
  ✓ Compiled in 923ms (1512 modules)
+ GET /components/voting-interface 200 in 93ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /favicon.ico in 119ms (403 modules)
+ GET /favicon.ico 200 in 230ms
+ ✓ Compiled in 803ms (1512 modules)
+ GET /components/voting-interface 200 in 75ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 1034ms (1512 modules)
+ ✓ Compiled /favicon.ico in 109ms (403 modules)
+ GET /favicon.ico 200 in 218ms
+ GET /components/voting-interface 200 in 42ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /favicon.ico 200 in 9ms
+ ✓ Compiled in 867ms (1512 modules)
+ GET /components/voting-interface 200 in 84ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /favicon.ico in 145ms (403 modules)
+ GET /favicon.ico 200 in 254ms
