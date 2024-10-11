@@ -97,3 +97,11 @@ https://nextjs.org/telemetry
  GET /favicon.ico 200 in 10ms
  GET /favicon.ico 200 in 10ms
  ✓ Compiled in 889ms (1512 modules)
+ GET /components/voting-interface 200 in 80ms
+ ✓ Compiled /favicon.ico in 136ms (403 modules)
+ GET /favicon.ico 200 in 240ms
+ ○ Compiling /components/display-results ...
+ ✓ Compiled /components/display-results in 1186ms (1508 modules)
+ ✓ Compiled /favicon.ico in 108ms (407 modules)
+ GET /favicon.ico 200 in 208ms
+ ✓ Compiled in 829ms (1448 modules)
