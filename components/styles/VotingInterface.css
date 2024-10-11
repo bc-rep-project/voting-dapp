@@ -81,7 +81,7 @@
 
 .back-button {
   background: linear-gradient(135deg, #ff7f50, #ff4500);
-  width: 100%;
+  width: 48%;
   padding: 12px 24px;
   border-radius: 6px;
   color: #fff;
@@ -95,9 +95,12 @@
 
 .next-button {
   background: linear-gradient(135deg, #32cd32, #228b22);
-  width: 100%;
+  width: 48%;
   padding: 12px 24px;
   border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
   color: #fff;
   cursor: pointer;
   transition: background 0.3s ease;
