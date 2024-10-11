@@ -40,31 +40,31 @@ export default function VotingInterface() {
       <form onSubmit={castVote} className="form">
       <h2 className="title">Cast Your Vote</h2>
       
-      <div className="space-y-2">
-        <Select onValueChange={(value) => setSelectedCandidate(value)}>
-        <SelectTrigger className="select-trigger">
-          <SelectValue placeholder="Select a candidate" />
-        </SelectTrigger>
-        <SelectContent className="select-content">
-          {candidates.map((candidate) => (
-            <SelectItem key={candidate.id} value={candidate.id} className="select-item">
-              {candidate.name}
-            </SelectItem>
-          ))}
-        </SelectContent>
-        </Select>
-      </div>
-      
-       <Button type="submit" className="button">Vote</Button>
- 
-     <div className="voting-interface-nav">
-         <Link href="/components/register-voter">
+       <div className="space-y-2 spacing">
+         <Select onValueChange={(value) => setSelectedCandidate(value)}>
+         <SelectTrigger className="select-trigger">
+           <SelectValue placeholder="Select a candidate" />
+         </SelectTrigger>
+         <SelectContent className="select-content">
+           {candidates.map((candidate) => (
+             <SelectItem key={candidate.id} value={candidate.id} className="select-item">
+               {candidate.name}
+             </SelectItem>
+           ))}
+         </SelectContent>
+         </Select>
+       </div>
+       
+        <Button type="submit" className="button spacing">Vote</Button>
+  
+      <div className="voting-interface-nav">
+          <Link href="/components/register-voter">
            <Button className="voting-interface-button back button-spacing">Back</Button>
-         </Link>
-         <Link href="/components/display-results">
-           <Button className="voting-interface-button next">Next</Button>
-         </Link>
-      </div>
+          </Link>
+          <Link href="/components/display-results">
+            <Button className="voting-interface-button next">Next</Button>
+          </Link>
+       </div>
     </form>
   );
 }
