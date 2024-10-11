@@ -66,3 +66,6 @@ https://nextjs.org/telemetry
  ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
  ✓ Compiled /favicon.ico in 113ms (403 modules)
  GET /favicon.ico 200 in 214ms
+ ✓ Compiled in 794ms (1512 modules)
+ GET /components/voting-interface 200 in 70ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
