@@ -72,15 +72,39 @@
   background: linear-gradient(135deg, #005bb5, #003f7f);
 }
 
-.button:hover {
-  background-color: #005bb5;
-}
-
 .nav-buttons {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 20px;
+}
+
+.back-button {
+  background: linear-gradient(135deg, #ff7f50, #ff4500);
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, #ff4500, #c71585);
+}
+
+.next-button {
+  background: linear-gradient(135deg, #32cd32, #228b22);
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.next-button:hover {
+  background: linear-gradient(135deg, #228b22, #006400);
 }
 
 .nav-buttons .button {
