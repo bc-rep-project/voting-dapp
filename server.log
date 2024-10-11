@@ -79,3 +79,13 @@ https://nextjs.org/telemetry
  ✓ Compiled in 1168ms (1543 modules)
  GET /components/voting-interface 200 in 43ms
  ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /favicon.ico 200 in 66ms
+ GET /favicon.ico 200 in 10ms
+ GET /favicon.ico 200 in 8ms
+ GET /favicon.ico 200 in 9ms
+ GET /favicon.ico 200 in 11ms
+ GET /favicon.ico 200 in 10ms
+ GET /favicon.ico 200 in 13ms
+ ✓ Compiled in 772ms (1543 modules)
+ GET /components/voting-interface 200 in 40ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
