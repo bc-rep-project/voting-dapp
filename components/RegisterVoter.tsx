@@ -15,7 +15,9 @@ export default function RegisterVoter() {
 
   const registerVoter = async (event) => {
     event.preventDefault();
+    console.log("Fetching accounts...");
     const accounts = await web3.eth.getAccounts();
+    console.log("Accounts fetched:", accounts);
      const contract = new web3.eth.Contract(Voting.abi, "0x5FbDB2315678afecb367f032d93F642f64180aa3"); // Replace with your contract address
 
     try {
