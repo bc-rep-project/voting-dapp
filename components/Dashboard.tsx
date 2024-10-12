@@ -9,24 +9,26 @@ export default function Dashboard() {
   return (
 <div className="dashboard-container">
        <h1 className="dashboard-title">Dashboard</h1>
-       <Link href="/components/connect-wallet">
-         <Button className="dashboard-button">Connect Wallet</Button>
-       </Link>
-       <Link href="/components/register-voter">
-         <Button className="dashboard-button">Register Voter</Button>
-       </Link>
-       <Link href="/components/voting-interface">
-         <Button className="dashboard-button">Voting Interface</Button>
-       </Link>
-       <Link href="/components/display-results">
-         <Button className="dashboard-button">Display Results</Button>
-       </Link>
-       <Link href="/components/view-voter">
-         <Button className="dashboard-button">View Voter</Button>
-       </Link>
-       <Link href="/app/view-all-voters">
-         <Button className="dashboard-button">View All Voters</Button>
-       </Link>
+       <div className="button-grid">
+         <Link href="/components/connect-wallet">
+           <Button className="dashboard-button big-rounded-square">Connect Wallet</Button>
+         </Link>
+         <Link href="/components/register-voter">
+           <Button className="dashboard-button big-rounded-square">Register Voter</Button>
+         </Link>
+         <Link href="/components/voting-interface">
+           <Button className="dashboard-button big-rounded-square">Voting Interface</Button>
+         </Link>
+         <Link href="/components/display-results">
+           <Button className="dashboard-button big-rounded-square">Display Results</Button>
+         </Link>
+         <Link href="/components/view-voter">
+           <Button className="dashboard-button big-rounded-square">View Voter</Button>
+         </Link>
+         <Link href="/app/view-all-voters">
+           <Button className="dashboard-button big-rounded-square">View All Voters</Button>
+         </Link>
+       </div>
      </div>
   );
 }

@@ -30,6 +30,23 @@
   transition: background-color 0.3s ease;
 }
 
+.big-rounded-square {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
 .dashboard-button:hover {
   background-color: #005bb5;
 }
