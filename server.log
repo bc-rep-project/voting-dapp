@@ -11,13 +11,82 @@ This information is used to shape Next.js' roadmap and prioritize features.
 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
 https://nextjs.org/telemetry
 
- ✓ Ready in 1718ms
+ ✓ Ready in 1769ms
  ○ Compiling / ...
- ✓ Compiled / in 5.1s (567 modules)
- HEAD / 200 in 5401ms
- GET / 200 in 36ms
+ ✓ Compiled / in 5.2s (567 modules)
+ HEAD / 200 in 5426ms
+ GET / 200 in 35ms
  ○ Compiling /components ...
- ✓ Compiled /components in 2.4s (831 modules)
- GET /components 200 in 2530ms
- ✓ Compiled /favicon.ico in 242ms (386 modules)
- GET /favicon.ico 200 in 369ms
+ ✓ Compiled /components in 2.3s (831 modules)
+ GET /components 200 in 2583ms
+ ✓ Compiled /favicon.ico in 240ms (386 modules)
+ GET /favicon.ico 200 in 371ms
+ GET / 200 in 157ms
+ GET /components 200 in 65ms
+ GET /favicon.ico 200 in 15ms
+ ✓ Compiled in 640ms (862 modules)
+ GET /components 200 in 36ms
+ GET /components 200 in 13ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /favicon.ico 200 in 68ms
+ GET /favicon.ico 200 in 9ms
+ ✓ Compiled in 543ms (561 modules)
+ ✓ Compiled in 308ms (561 modules)
+ ✓ Compiled / in 279ms (355 modules)
+ GET / 200 in 517ms
+ GET /components 200 in 42ms
+ ✓ Compiled /favicon.ico in 205ms (386 modules)
+ GET /favicon.ico 200 in 321ms
+ ✓ Compiled in 556ms (561 modules)
+ GET /components 200 in 52ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /favicon.ico in 61ms (131 modules)
+ GET /favicon.ico 200 in 154ms
+ ✓ Compiled / in 231ms (355 modules)
+ GET / 200 in 499ms
+ GET /components 200 in 50ms
+ ✓ Compiled in 521ms (831 modules)
+ GET /components 200 in 35ms
+ GET /components 200 in 15ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /favicon.ico in 106ms (386 modules)
+ GET /favicon.ico 200 in 213ms
+ GET /favicon.ico 200 in 10ms
+ ✓ Compiled in 430ms (561 modules)
+ GET /components 200 in 41ms
+ GET /components 200 in 13ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /favicon.ico in 55ms (131 modules)
+ GET /favicon.ico 200 in 133ms
+ GET /favicon.ico 200 in 10ms
+ ○ Compiling /components/voting-interface ...
+ ✓ Compiled /components/voting-interface in 4.1s (1265 modules)
+ GET /favicon.ico 200 in 71ms
+ GET /favicon.ico 200 in 9ms
+ ✓ Compiled in 747ms (1232 modules)
+ GET /components 200 in 52ms
+ ✓ Compiled /favicon.ico in 53ms (141 modules)
+ GET /favicon.ico 200 in 145ms
+ GET /components 200 in 33ms
+ GET /favicon.ico 200 in 11ms
+ ✓ Compiled in 418ms (1278 modules)
+ GET /components 200 in 34ms
+ GET /components 200 in 12ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /favicon.ico 200 in 63ms
+ ✓ Compiled in 344ms (1278 modules)
+ GET /components 200 in 22ms
+ GET /favicon.ico 200 in 47ms
+ GET /favicon.ico 200 in 8ms
+ ○ Compiling / ...
+ ✓ Compiled / in 684ms (396 modules)
+ GET / 200 in 905ms
+ GET /components 200 in 34ms
+ GET /favicon.ico 200 in 27ms
+ ✓ Compiled in 722ms (1232 modules)
+ GET /components 200 in 42ms
+ GET /components 200 in 12ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /favicon.ico in 67ms (141 modules)
+ GET /favicon.ico 200 in 155ms
+ GET /favicon.ico 200 in 10ms

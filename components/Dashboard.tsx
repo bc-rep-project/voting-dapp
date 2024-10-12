@@ -7,7 +7,7 @@ import "@/components/styles/Dashboard.css";
 
 export default function Dashboard() {
   return (
-<div className="dashboard-container">
+<div className="dashboard-container" style={{ minHeight: '100vh', padding: '20px' }}>
        <h1 className="dashboard-title">Dashboard</h1>
        <div className="button-grid">
          <Link href="/components/connect-wallet">
