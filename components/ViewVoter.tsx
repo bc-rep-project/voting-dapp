@@ -5,6 +5,7 @@ import { useState } from "react";
 import web3 from "../utils/web3";
 import { Button } from "@/components/ui/button";
 import Voting from "../contracts/Voting.json"; // Assuming ABI is available
+import "@/components/styles/ViewVoter.css";
 
 export default function ViewVoter() {
   const [voterAddress, setVoterAddress] = useState("");
