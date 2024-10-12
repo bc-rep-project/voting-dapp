@@ -13,6 +13,48 @@
   margin: auto;
 }
 
+.view-voter-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.view-voter-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0070f3;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.view-voter-button:hover {
+  background-color: #005bb5;
+}
+
+.view-voter-details {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.view-voter-details h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.view-voter-details p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
 .title {
   font-size: 24px;
   font-weight: bold;

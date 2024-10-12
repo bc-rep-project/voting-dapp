@@ -30,17 +30,17 @@ export default function ViewVoter() {
         value={voterAddress}
         onChange={(e) => setVoterAddress(e.target.value)}
         placeholder="Enter Voter Address"
-        className="w-full p-2 border rounded"
-      />
-      <Button onClick={fetchVoterDetails} className="w-full">Fetch Details</Button>
-      {voterDetails && (
-        <div className="mt-4">
-          <h3 className="text-xl font-bold">Voter Details:</h3>
-          <p>Address: {voterDetails.address}</p>
-          <p>Voted: {voterDetails.hasVoted ? "Yes" : "No"}</p>
-          <p>Vote: {voterDetails.vote}</p>
-        </div>
-      )}
-    </div>
+         className="view-voter-input"
+       />
+       <Button onClick={fetchVoterDetails} className="view-voter-button">Fetch Details</Button>
+       {voterDetails && (
+         <div className="view-voter-details">
+           <h3>Voter Details:</h3>
+           <p>Address: {voterDetails.address}</p>
+           <p>Voted: {voterDetails.hasVoted ? "Yes" : "No"}</p>
+           <p>Vote: {voterDetails.vote}</p>
+         </div>
+       )}
+     </div>
   );
 }
