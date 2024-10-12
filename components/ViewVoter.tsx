@@ -23,7 +23,7 @@ export default function ViewVoter() {
   };
 
   return (
-    <div className="space-y-6 max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
+     <div className="view-voter-container">
       <h2 className="text-2xl font-bold text-center mb-6">View Voter Details</h2>
       <input
         type="text"
