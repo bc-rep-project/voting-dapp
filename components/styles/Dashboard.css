@@ -24,10 +24,10 @@
 .dashboard-button {
   padding: 20px;
   font-size: 1.25rem;
-  border-radius: 16px;
+  border-radius: 50%;
   text-align: center;
-  width: 200px;
-  height: 60px;
+  width: 150px;
+  height: 150px;
 }
 
 @media (min-width: 1024px) {
