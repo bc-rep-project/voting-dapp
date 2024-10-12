@@ -44,9 +44,9 @@ export default function DisplayResults() {
       <h2 className="title">Election Results</h2>
       
       {error && <div className="error-message">{error}</div>}
-      <Button onClick={tallyVotes} className="button">Tally Votes</Button>
+      <Button onClick={tallyVotes} className="button tally-button">Tally Votes</Button>
       <Link href="/components/voting-interface">
-        <Button className="back-button">Back</Button>
+        <Button className="back-button tally-button">Back</Button>
       </Link>
     </div>
   );
