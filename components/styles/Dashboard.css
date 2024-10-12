@@ -1,149 +1,48 @@
 
 .dashboard-container {
+  min-height: 100vh;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 30px;
-  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  max-width: 800px;
-  margin: 40px auto;
-  animation: fadeIn 0.5s ease-in-out;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .button-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
-  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  justify-items: center;
 }
 
-@media (max-width: 768px) {
-  .dashboard-container {
-    max-width: 100%;
-    padding: 20px;
-  }
+.dashboard-button {
+  padding: 20px;
+  font-size: 1.25rem;
+  border-radius: 16px;
+  text-align: center;
+  width: 200px;
+  height: 60px;
+}
 
+@media (min-width: 1024px) {
   .button-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .big-rounded-square {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    font-size: 1em;
-  }
-
-  .dashboard-button {
-    width: 100%;
-    padding: 15px;
-    font-size: 1em;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 600px) {
-  .button-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .dashboard-title {
+    font-size: 1.5rem;
   }
 
   .dashboard-button {
-    width: 90%;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    padding: 16px;
   }
-}
-
-@media (max-width: 480px) {
-  .dashboard-container {
-    padding: 10px;
-  }
-
-  .button-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .big-rounded-square {
-    width: 100%;
-    height: auto;
-    padding: 10px;
-    font-size: 0.9em;
-  }
-
-  .dashboard-button {
-    width: 100%;
-    padding: 10px;
-    font-size: 0.9em;
-  }
-}
-
-@media (max-width: 320px) {
-  .dashboard-container {
-    padding: 5px;
-  }
-
-  .button-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .big-rounded-square {
-    width: 100%;
-    height: auto;
-    padding: 5px;
-    font-size: 0.8em;
-  }
-
-  .dashboard-button {
-    width: 100%;
-    padding: 5px;
-    font-size: 0.8em;
-  }
-}
-
-.dashboard-title {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.dashboard-button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 1em;
-  color: white;
-  background-color: #0070f3;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.big-rounded-square {
-  width: 150px;
-  height: 150px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 1.2em;
-}
-
-.button-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.dashboard-button:hover {
-  background-color: #005bb5;
 }
