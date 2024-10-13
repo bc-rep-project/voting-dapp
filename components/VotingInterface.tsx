@@ -37,7 +37,7 @@ export default function VotingInterface() {
   };
 
   return (
-      <form onSubmit={castVote} className="form">
+      <form onSubmit={castVote} className="form responsive-form">
       <h2 className="title">Cast Your Vote</h2>
       
        <div className="space-y-2 spacing">
