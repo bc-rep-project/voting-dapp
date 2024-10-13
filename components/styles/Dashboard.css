@@ -26,10 +26,7 @@
   font-size: 1.25rem;
   border-radius: 10px;
   text-align: center;
-  width: 150px !important; /* Hardcode width */
-  height: 150px !important; /* Hardcode height */
-  background-color: #007bff !important; /* Hardcode background color */
-  color: #fff !important; /* Hardcode text color */
+  width: 150px;
   height: 150px;
 }
 
