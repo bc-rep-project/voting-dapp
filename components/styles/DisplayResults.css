@@ -58,3 +58,25 @@
     margin-bottom: 10px;
     font-size: 18px;
 }
+.dashboard-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px; /* Adjust the width to match the Back button */
+}
+
+.dashboard-button:hover {
+    background-color: #218838;
+}
+
+/* New CSS class for button container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
