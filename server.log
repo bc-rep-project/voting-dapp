@@ -11,27 +11,35 @@ This information is used to shape Next.js' roadmap and prioritize features.
 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
 https://nextjs.org/telemetry
 
- ✓ Ready in 1721ms
+ ✓ Ready in 1767ms
  ○ Compiling / ...
  ✓ Compiled / in 5.1s (567 modules)
- HEAD / 200 in 5407ms
- GET / 200 in 45ms
- ✓ Compiled /favicon.ico in 350ms (310 modules)
- GET /favicon.ico 200 in 462ms
+ HEAD / 200 in 5402ms
+ GET / 200 in 36ms
  ○ Compiling /components ...
- ✓ Compiled /components in 1981ms (862 modules)
- GET /components 200 in 11ms
- GET /favicon.ico 200 in 70ms
+ ✓ Compiled /components in 2.3s (831 modules)
+ GET /components 200 in 2607ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /favicon.ico in 240ms (386 modules)
+ GET /favicon.ico 200 in 369ms
  ○ Compiling /components/voting-interface ...
  ✓ Compiled /components/voting-interface in 3.6s (1520 modules)
- GET /favicon.ico 200 in 80ms
- ✓ Compiled in 820ms (1502 modules)
- GET /components/voting-interface 200 in 760ms
- ✓ Compiled /favicon.ico in 114ms (396 modules)
- GET /favicon.ico 200 in 220ms
- GET /components/voting-interface 200 in 64ms
- GET /favicon.ico 200 in 13ms
- ✓ Compiled in 680ms (1533 modules)
- GET /components/voting-interface 200 in 59ms
+ GET /favicon.ico 200 in 67ms
+ ✓ Compiled in 718ms (1232 modules)
+ GET /components/voting-interface 200 in 722ms
+ ✓ Compiled /favicon.ico in 227ms (141 modules)
+ GET /favicon.ico 200 in 313ms
+ ✓ Compiled / in 159ms (396 modules)
+ GET / 200 in 379ms
+ GET /components 200 in 50ms
+ GET /favicon.ico 200 in 21ms
+ GET /favicon.ico 200 in 14ms
+ ✓ Compiled in 826ms (1232 modules)
+ GET /components/voting-interface 200 in 70ms
  ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
- GET /favicon.ico 200 in 68ms
+ ✓ Compiled /favicon.ico in 59ms (141 modules)
+ GET /favicon.ico 200 in 147ms
+ ✓ Compiled in 587ms (1278 modules)
+ GET /components/voting-interface 200 in 46ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /favicon.ico 200 in 65ms

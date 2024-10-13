@@ -20,16 +20,22 @@
     width: 100%;
 }
 
-/* Update the responsive styles */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .voting-interface-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     .button-container {
         flex-direction: row;
         justify-content: space-between;
-    }
-
-    .voting-interface-nav {
-        flex-direction: column;
-        align-items: center;
     }
 
     .voting-interface-button {
@@ -37,10 +43,13 @@
         margin-bottom: 10px;
     }
 
-    .voting-interface-button:not(:last-child) {
-        margin-right: 4%;
+    .voting-interface-button + .voting-interface-button {
+        margin-top: 0;
     }
 }
+
+/* Update the responsive styles */
+
 
 .button {
     width: 100%;
