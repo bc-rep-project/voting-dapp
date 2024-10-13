@@ -1,137 +1,4 @@
 
-
-
-
-.voting-interface-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Add this new class for the button container */
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .voting-interface-button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .voting-interface-button {
-        width: 48%;
-        margin-bottom: 10px;
-    }
-
-    .voting-interface-button + .voting-interface-button {
-        margin-top: 0;
-        margin-left: 4%;
-    }
-
-    .button-container {
-        justify-content: space-between;
-        padding: 0 20px;
-    }
-}
-
-/* Update the responsive styles */
-
-
-.button {
-    width: 100%;
-    padding: 10px;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .form {
-        padding: 20px;
-        max-width: 100%;
-        margin: 20px;
-    }
-
-    .button-spacing {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .voting-interface-nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .voting-interface-button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .select-trigger {
-        width: 100%;
-    }
-
-    .select-content {
-        width: 100%;
-    }
-
-    .select-item {
-        width: 100%;
-    }
-
-    .title {
-        font-size: 1.5rem;
-    }
-
-    .spacing {
-        margin-bottom: 15px;
-    }
-}
-
-
-
-
-
-.voting-interface-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.voting-interface-nav-button:hover {
-    background-color: #0056b3;
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -145,62 +12,93 @@
   animation: fadeIn 0.5s ease-in-out;
 }
 
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.spacing {
+  margin-bottom: 20px;
+}
+
+.select-trigger {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.select-content {
+  width: 100%;
+}
+
+.select-item {
+  padding: 10px;
+  font-size: 1rem;
+}
+
 .button {
-    width: 100%;
-    padding: 10px;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Responsive styles */
+.button:hover {
+  background-color: #0056b3;
+}
+
+.voting-interface-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.voting-interface-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.voting-interface-button:hover {
+  background-color: #0056b3;
+}
+
 @media (max-width: 768px) {
-    .form {
-        padding: 20px;
-        max-width: 100%;
-        margin: 20px;
-    }
+  .title {
+    font-size: 1.5rem;
+  }
 
-    .button-spacing {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .voting-interface-nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .voting-interface-button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .select-trigger {
-        width: 100%;
-    }
-
-    .select-content {
-        width: 100%;
-    }
-
-    .select-item {
-        width: 100%;
-    }
-
-    .title {
-        font-size: 1.5rem;
-    }
-
-    .spacing {
-        margin-bottom: 15px;
-    }
+  .button,
+  .voting-interface-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
 }
 
-.select-item:hover {
-    background-color: #f1f1f1;
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .button,
+  .voting-interface-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
 }

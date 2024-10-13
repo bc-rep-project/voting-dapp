@@ -6,7 +6,7 @@ import web3 from "../utils/web3";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Voting from "../contracts/Voting.json"; // Assuming ABI is available
-import "../components/styles/VotingInterface.css";
+import "@/components/styles/VotingInterface.css";
 import Link from "next/link";
 
 const candidates = [
@@ -37,36 +37,34 @@ export default function VotingInterface() {
   };
 
   return (
-      <form onSubmit={castVote} className="form">
+    <form onSubmit={castVote} className="form">
       <h2 className="title">Cast Your Vote</h2>
       
-       <div className="space-y-2 spacing">
-         <Select onValueChange={(value) => setSelectedCandidate(value)}>
-         <SelectTrigger className="select-trigger">
-           <SelectValue placeholder="Select a candidate" />
-         </SelectTrigger>
-         <SelectContent className="select-content">
-           {candidates.map((candidate) => (
-             <SelectItem key={candidate.id} value={candidate.id} className="select-item">
-               {candidate.name}
-             </SelectItem>
-           ))}
-         </SelectContent>
-         </Select>
-       </div>
-       
-        <Button type="submit" className="button spacing">Vote</Button>
+      <div className="spacing">
+        <Select onValueChange={(value) => setSelectedCandidate(value)}>
+          <SelectTrigger className="select-trigger">
+            <SelectValue placeholder="Select a candidate" />
+          </SelectTrigger>
+          <SelectContent className="select-content">
+            {candidates.map((candidate) => (
+              <SelectItem key={candidate.id} value={candidate.id} className="select-item">
+                {candidate.name}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+      
+      <Button type="submit" className="button spacing">Vote</Button>
   
       <div className="voting-interface-nav">
-          <div className="button-container">
-              <Link href="/components/register-voter">
-               <Button className="voting-interface-button back button-spacing">Back</Button>
-              </Link>
-              <Link href="/components/display-results">
-                <Button className="voting-interface-button next">Next</Button>
-              </Link>
-          </div>
-       </div>
+        <Link href="/components/register-voter">
+          <Button className="voting-interface-button">Back</Button>
+        </Link>
+        <Link href="/components/display-results">
+          <Button className="voting-interface-button">Next</Button>
+        </Link>
+      </div>
     </form>
   );
 }
