@@ -43,3 +43,25 @@ https://nextjs.org/telemetry
  GET /components/voting-interface 200 in 46ms
  ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
  GET /favicon.ico 200 in 65ms
+ ✓ Compiled in 695ms (1232 modules)
+ GET /components/voting-interface 200 in 54ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /favicon.ico in 63ms (141 modules)
+ GET /favicon.ico 200 in 146ms
+ ✓ Compiled in 522ms (1278 modules)
+ GET /components/voting-interface 200 in 43ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /favicon.ico 200 in 52ms
+ ✓ Compiled in 402ms (1278 modules)
+ GET /components/voting-interface 200 in 38ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /favicon.ico 200 in 56ms
+ ✓ Compiled in 693ms (1232 modules)
+ GET /components/voting-interface 200 in 49ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /favicon.ico in 62ms (141 modules)
+ GET /favicon.ico 200 in 153ms
+ ✓ Compiled in 606ms (1278 modules)
+ GET /components/voting-interface 200 in 45ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /favicon.ico 200 in 68ms

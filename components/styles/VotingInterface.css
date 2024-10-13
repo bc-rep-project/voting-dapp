@@ -45,6 +45,12 @@
 
     .voting-interface-button + .voting-interface-button {
         margin-top: 0;
+        margin-left: 4%;
+    }
+
+    .button-container {
+        justify-content: space-between;
+        padding: 0 20px;
     }
 }
 
