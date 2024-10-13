@@ -30,6 +30,35 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.select-trigger:hover {
+  border-color: #007bff;
+}
+
+.select-content {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.select-item {
+  padding: 10px;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.select-item:hover {
+  background-color: #f1f1f1;
 }
 
 .select-content {

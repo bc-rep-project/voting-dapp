@@ -24,3 +24,12 @@ https://nextjs.org/telemetry
  ○ Compiling /components/voting-interface ...
  ✓ Compiled /components/voting-interface in 4.6s (1520 modules)
  GET /favicon.ico 200 in 85ms
+ ○ Compiling /components/register-voter ...
+ ✓ Compiled /components/register-voter in 766ms (1234 modules)
+ ✓ Compiled /favicon.ico in 218ms (148 modules)
+ GET /favicon.ico 200 in 316ms
+ GET /favicon.ico 200 in 9ms
+ ✓ Compiled in 841ms (1243 modules)
+ GET /components/voting-interface 200 in 822ms
+ ✓ Compiled /favicon.ico in 68ms (144 modules)
+ GET /favicon.ico 200 in 162ms
