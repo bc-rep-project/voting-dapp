@@ -1,10 +1,92 @@
 
-.voting-interface-nav-button {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
+
+
+
+.voting-interface-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  max-width: 450px;
+  margin: 40px auto;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .form {
+        padding: 20px;
+        max-width: 100%;
+        margin: 20px;
+    }
+
+    .button-spacing {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .voting-interface-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .voting-interface-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .select-trigger {
+        width: 100%;
+    }
+
+    .select-content {
+        width: 100%;
+    }
+
+    .select-item {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .spacing {
+        margin-bottom: 15px;
+    }
+}
+
+
+
+
 
 .voting-interface-button {
     padding: 10px 20px;
@@ -88,106 +170,6 @@
     .spacing {
         margin-bottom: 15px;
     }
-}
-
-
-
-    .voting-interface-nav {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .voting-interface-button {
-        width: auto;
-        margin-bottom: 0;
-    }
-
-    .select-trigger {
-        width: 300px;
-    }
-
-    .select-content {
-        width: 300px;
-    }
-
-    .select-item {
-        width: 300px;
-    }
-
-    .title {
-        font-size: 2rem;
-    }
-
-    .spacing {
-        margin-bottom: 20px;
-    }
-
-
-
-    .voting-interface-button {
-        width: auto;
-        margin-bottom: 0;
-    }
-
-    .select-trigger {
-        width: auto;
-    }
-
-    .select-content {
-        width: auto;
-    }
-
-    .select-item {
-        width: auto;
-    }
-
-
-
-
-.button-spacing {
-    margin-right: 300px; /* Adjust the margin as needed */
-}
-
-.title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
-}
-
-.select-trigger {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    color: #333;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
-}
-
-.select-trigger:hover {
-    border-color: #007bff;
-}
-
-.select-content {
-    width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.select-item {
-    padding: 10px;
-    font-size: 1rem;
-    color: #333;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .select-item:hover {
