@@ -61,7 +61,8 @@
 
 .dashboard-button {
   background-color: #28a745;
-  width: 150px; /* Set a fixed width for the Dashboard button */
+  width: auto; /* Override conflicting width */
+  height: auto; /* Override conflicting height */
 }
 
 .dashboard-button:hover {
