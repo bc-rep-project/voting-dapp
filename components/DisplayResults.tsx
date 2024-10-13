@@ -49,7 +49,7 @@ export default function DisplayResults() {
         <Link href="/components/voting-interface">
           <Button className="back-button tally-button">Back</Button>
         </Link>
-        <Link href="/pages/components">
+        <Link href="/components">
           <Button className="dashboard-button tally-button">Dashboard</Button>
         </Link>
       </div>
