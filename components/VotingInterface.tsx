@@ -58,12 +58,14 @@ export default function VotingInterface() {
         <Button type="submit" className="button spacing">Vote</Button>
   
       <div className="voting-interface-nav">
-          <Link href="/components/register-voter">
-           <Button className="voting-interface-button back button-spacing">Back</Button>
-          </Link>
-          <Link href="/components/display-results">
-            <Button className="voting-interface-button next">Next</Button>
-          </Link>
+          <div className="button-container">
+              <Link href="/components/register-voter">
+               <Button className="voting-interface-button back button-spacing">Back</Button>
+              </Link>
+              <Link href="/components/display-results">
+                <Button className="voting-interface-button next">Next</Button>
+              </Link>
+          </div>
        </div>
     </form>
   );

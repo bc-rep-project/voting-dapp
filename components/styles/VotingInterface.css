@@ -13,19 +13,33 @@
     transition: background-color 0.3s ease;
 }
 
+/* Add this new class for the button container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
+/* Update the responsive styles */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
-  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  max-width: 450px;
-  margin: 40px auto;
-  animation: fadeIn 0.5s ease-in-out;
+    .voting-interface-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .voting-interface-button {
+        width: 48%;
+        margin-bottom: 10px;
+    }
+
+    .voting-interface-button:not(:last-child) {
+        margin-right: 4%;
+    }
 }
 
 .button {

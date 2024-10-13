@@ -11,39 +11,27 @@ This information is used to shape Next.js' roadmap and prioritize features.
 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
 https://nextjs.org/telemetry
 
- ✓ Ready in 1692ms
+ ✓ Ready in 1721ms
  ○ Compiling / ...
  ✓ Compiled / in 5.1s (567 modules)
- HEAD / 200 in 5315ms
- GET / 200 in 38ms
- ✓ Compiled /favicon.ico in 328ms (310 modules)
- GET /favicon.ico 200 in 446ms
+ HEAD / 200 in 5407ms
+ GET / 200 in 45ms
+ ✓ Compiled /favicon.ico in 350ms (310 modules)
+ GET /favicon.ico 200 in 462ms
  ○ Compiling /components ...
- ✓ Compiled /components in 2.3s (862 modules)
- GET /components 200 in 16ms
- GET /favicon.ico 200 in 69ms
+ ✓ Compiled /components in 1981ms (862 modules)
+ GET /components 200 in 11ms
+ GET /favicon.ico 200 in 70ms
  ○ Compiling /components/voting-interface ...
- ✓ Compiled /components/voting-interface in 4s (1520 modules)
- GET /favicon.ico 200 in 84ms
- ✓ Compiled in 851ms (1502 modules)
- GET /components/voting-interface 200 in 792ms
- GET /components/voting-interface 200 in 13ms
- ✓ Compiled /favicon.ico in 134ms (396 modules)
- GET /favicon.ico 200 in 268ms
- ⨯ ./components/styles/VotingInterface.css:6:1
-Syntax error: /home/user/voting-dapp/components/styles/VotingInterface.css Unexpected }
-
-  4 |     width: 100%;
-  5 |     margin-top: 20px;
-> 6 | }
-    | ^
-  7 | 
-  8 | .voting-interface-button {
- ✓ Compiled in 473ms (1502 modules)
- GET /components/voting-interface 200 in 90ms
- GET /components/voting-interface 200 in 11ms
+ ✓ Compiled /components/voting-interface in 3.6s (1520 modules)
+ GET /favicon.ico 200 in 80ms
+ ✓ Compiled in 820ms (1502 modules)
+ GET /components/voting-interface 200 in 760ms
+ ✓ Compiled /favicon.ico in 114ms (396 modules)
+ GET /favicon.ico 200 in 220ms
+ GET /components/voting-interface 200 in 64ms
+ GET /favicon.ico 200 in 13ms
+ ✓ Compiled in 680ms (1533 modules)
+ GET /components/voting-interface 200 in 59ms
  ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
- ✓ Compiled in 431ms (1502 modules)
- ✓ Compiled in 493ms (1502 modules)
- ✓ Compiled /favicon.ico in 404ms (396 modules)
- GET /favicon.ico 200 in 519ms
+ GET /favicon.ico 200 in 68ms
