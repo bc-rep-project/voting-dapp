@@ -38,6 +38,7 @@
 .button-container {
   display: flex;
   justify-content: space-between;
+  gap: 10px; /* Add gap between buttons */
 }
 
 .back-button, .dashboard-button {
@@ -60,6 +61,7 @@
 
 .dashboard-button {
   background-color: #28a745;
+  width: 150px; /* Set a fixed width for the Dashboard button */
 }
 
 .dashboard-button:hover {
