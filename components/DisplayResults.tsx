@@ -42,18 +42,17 @@ export default function DisplayResults() {
   return (
     <div className="container">
       <h2 className="title">Election Results</h2>
-      
+
       {error && <div className="error-message">{error}</div>}
       <Button onClick={tallyVotes} className="button tally-button" style={{ marginBottom: '20px' }}>Tally Votes</Button>
-       <div className="button-container">
-         <Link href="/components/voting-interface">
-           <Button className="back-button tally-button">Back</Button>
-         </Link>
-         <Link href="/pages/components">
-           <Button className="dashboard-button tally-button">Dashboard</Button>
-         </Link>
-       </div>
-
+      <div className="button-container">
+        <Link href="/components/voting-interface">
+          <Button className="back-button tally-button">Back</Button>
+        </Link>
+        <Link href="/pages/components">
+          <Button className="dashboard-button tally-button">Dashboard</Button>
+        </Link>
+      </div>
     </div>
   );
 }
