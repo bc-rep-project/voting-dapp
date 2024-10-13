@@ -80,23 +80,49 @@
     .select-item {
         width: 100%;
     }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .spacing {
+        margin-bottom: 15px;
+    }
 }
 
-@media (min-width: 769px) {
-    .form {
-        padding: 30px;
-        max-width: 450px;
-        margin: 40px auto;
-    }
 
-    .button-spacing {
-        margin-right: 300px;
-    }
 
     .voting-interface-nav {
         flex-direction: row;
         justify-content: space-between;
     }
+
+    .voting-interface-button {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .select-trigger {
+        width: 300px;
+    }
+
+    .select-content {
+        width: 300px;
+    }
+
+    .select-item {
+        width: 300px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .spacing {
+        margin-bottom: 20px;
+    }
+
+
 
     .voting-interface-button {
         width: auto;
@@ -114,29 +140,9 @@
     .select-item {
         width: auto;
     }
-}
 
-@media (min-width: 769px) {
-    .form {
-        padding: 30px;
-        max-width: 450px;
-        margin: 40px auto;
-    }
 
-    .button-spacing {
-        margin-right: 300px;
-    }
 
-    .voting-interface-nav {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .voting-interface-button {
-        width: auto;
-        margin-bottom: 0;
-    }
-}
 
 .button-spacing {
     margin-right: 300px; /* Adjust the margin as needed */
