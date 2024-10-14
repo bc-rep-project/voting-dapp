@@ -20,7 +20,7 @@ export default function Sidebar() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </Button>
-      <div className={`fixed sm:relative flex ${isOpen ? "w-64" : "w-0"} transition-width duration-300 bg-gray-800 text-white h-screen`}>
+      <div className={`fixed sm:relative flex ${isOpen ? "w-64" : "w-20 sm:w-20"} transition-width duration-300 bg-gray-800 text-white h-screen`}>
         <div className="flex flex-col items-center w-full">
           <Button onClick={toggleSidebar} className="mt-4 sm:block hidden">
             {isOpen ? "Collapse" : "Expand"}
