@@ -11,3 +11,14 @@
 10 verbose logfile /home/user/.npm/_logs/2024-10-14T00_27_24_503Z-debug-0.log
 11 silly logfile done cleaning log files
 12 http fetch GET 200 https://registry.npmjs.org/npm 182ms
+13 verbose cwd /home/user/web-app
+14 verbose os Linux 5.10.186+
+15 verbose node v20.17.0
+16 verbose npm  v10.8.2
+17 notice
+17 notice New minor version of npm available! 10.8.2 -> 10.9.0
+17 notice Changelog: https://github.com/npm/cli/releases/tag/v10.9.0
+17 notice To update run: npm install -g npm@10.9.0
+17 notice  { force: true, [Symbol(proc-log.meta)]: true }
+18 verbose exit 0
+19 info ok
