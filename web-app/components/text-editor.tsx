@@ -12,7 +12,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
 
-const socket = io("http://localhost:4000");
+const socket = io("http://localhost:3002");
 
 export default function TextEditor() {
   const [content, setContent] = useState("");

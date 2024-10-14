@@ -1,0 +1,16 @@
+
+> web-app@0.1.0 dev
+> next dev -p 3003
+
+  ▲ Next.js 14.2.13
+  - Local:        http://localhost:3003
+
+ ✓ Starting...
+ ✓ Ready in 2.1s
+ ○ Compiling / ...
+ ✓ Compiled / in 6.7s (857 modules)
+ HEAD / 200 in 7075ms
+ ✓ Compiled in 554ms (390 modules)
+ GET / 200 in 39ms
+ ✓ Compiled /favicon.ico in 395ms (467 modules)
+ GET /favicon.ico 200 in 505ms
