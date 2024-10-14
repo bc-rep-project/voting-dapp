@@ -1,0 +1,45 @@
+
+> web-app@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+  ▲ Next.js 14.2.13
+  - Local:        http://localhost:3001
+
+ ✓ Starting...
+ ✓ Ready in 1860ms
+ ○ Compiling / ...
+ ⨯ ./components/candidate-info.tsx:8:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m  6 |[39m [36mimport[39m { [33mInput[39m } [36mfrom[39m [32m"@/components/ui/input"[39m[33m;[39m[0m
+[0m [90m  7 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m"@/components/ui/label"[39m[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { toast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m[0m
+[0m [90m    |[39m [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m[0m
+[0m [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mCandidateInfo[39m() {[0m
+[0m [90m 11 |[39m   [36mconst[39m [candidateId[33m,[39m setCandidateId] [33m=[39m useState([32m""[39m)[33m;[39m[0m
+
+https://nextjs.org/docs/messages/module-not-found
+ ⨯ ./components/candidate-info.tsx:8:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m  6 |[39m [36mimport[39m { [33mInput[39m } [36mfrom[39m [32m"@/components/ui/input"[39m[33m;[39m[0m
+[0m [90m  7 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m"@/components/ui/label"[39m[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { toast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m[0m
+[0m [90m    |[39m [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m[0m
+[0m [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mCandidateInfo[39m() {[0m
+[0m [90m 11 |[39m   [36mconst[39m [candidateId[33m,[39m setCandidateId] [33m=[39m useState([32m""[39m)[33m;[39m[0m
+
+https://nextjs.org/docs/messages/module-not-found
+ ⨯ ./components/candidate-info.tsx:8:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m  6 |[39m [36mimport[39m { [33mInput[39m } [36mfrom[39m [32m"@/components/ui/input"[39m[33m;[39m[0m
+[0m [90m  7 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m"@/components/ui/label"[39m[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { toast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m[0m
+[0m [90m    |[39m [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m[0m
+[0m [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mCandidateInfo[39m() {[0m
+[0m [90m 11 |[39m   [36mconst[39m [candidateId[33m,[39m setCandidateId] [33m=[39m useState([32m""[39m)[33m;[39m[0m
+
+https://nextjs.org/docs/messages/module-not-found
+ HEAD / 500 in 5297ms

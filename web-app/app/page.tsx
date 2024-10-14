@@ -1,0 +1,32 @@
+
+import Sidebar from '../components/sidebar'
+import HomePage from '../components/homepage'
+import RegisterVoter from '../components/register-voter'
+import CastVote from '../components/cast-vote'
+import TallyVotes from '../components/tally-votes'
+import CandidateInfo from '../components/candidate-info'
+
+export default function Home() {
+  return (
+    <div className="flex">
+      <Sidebar />
+      <div className="flex-1 p-4">
+        <section id="home">
+          <HomePage />
+        </section>
+        <section id="register" className="mt-8">
+          <RegisterVoter />
+        </section>
+        <section id="vote" className="mt-8">
+          <CastVote />
+        </section>
+        <section id="tally" className="mt-8">
+          <TallyVotes />
+        </section>
+        <section id="info" className="mt-8">
+          <CandidateInfo />
+        </section>
+      </div>
+    </div>
+  )
+}
