@@ -88,28 +88,30 @@ export default function TextEditor() {
 
   return (
     <div className="container mx-auto p-4">
-     <Button onClick={fetchHistory}>Show Version History</Button>
-     {showHistory && (
-       <div className="version-history">
-         <h3>Version History</h3>
-         <ul>
-           {history.map((version) => (
-             <li key={version.version}>
-               <span>Version {version.version} - {new Date(version.modifiedAt).toLocaleString()}</span>
-               <Button onClick={() => revertToVersion(version.version)}>Revert</Button>
-             </li>
-           ))}
-         </ul>
+      <Card className="mb-4">
+         <CardHeader>
+           <CardTitle>Text Editor</CardTitle>
+         </CardHeader>
+         <CardContent>
+           <ReactQuill value={content} onChange={handleContentChange} />
+         </CardContent>
+       </Card>
+       <div style={{ textAlign: 'left' }}>
+         <Button onClick={fetchHistory}>Show Version History</Button>
        </div>
-     )}
-     <Card className="mb-4">
-        <CardHeader>
-          <CardTitle>Text Editor</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ReactQuill value={content} onChange={handleContentChange} />
-        </CardContent>
-      </Card>
+      {showHistory && (
+        <div className="version-history">
+          <h3>Version History</h3>
+          <ul>
+            {history.map((version) => (
+              <li key={version.version}>
+                <span>Version {version.version} - {new Date(version.modifiedAt).toLocaleString()}</span>
+                <Button onClick={() => revertToVersion(version.version)}>Revert</Button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       <Card>
         <CardHeader>
           <CardTitle>Chat</CardTitle>
