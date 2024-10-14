@@ -14,17 +14,7 @@ export default function Home() {
         <section id="home">
           <HomePage />
         </section>
-        <section id="register" className="mt-8">
-          <RegisterVoter />
-        </section>
-        <section id="vote" className="mt-8">
-          <CastVote />
-        </section>
-        <section id="tally" className="mt-8">
-          <TallyVotes />
-        </section>
-        <section id="info" className="mt-8">
-          <CandidateInfo />
+
         </section>
       </div>
     </div>
