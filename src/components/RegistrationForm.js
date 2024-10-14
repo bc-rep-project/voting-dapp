@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import Web3 from 'web3';
+import CryptoJS from 'crypto-js';
 
 const RegistrationForm = ({ contract, accounts }) => {
   const [voterAddress, setVoterAddress] = useState('');
@@ -8,7 +9,8 @@ const RegistrationForm = ({ contract, accounts }) => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await contract.methods.registerVoter(voterAddress).send({ from: accounts[0] });
+      const encryptedAddress = CryptoJS.AES.encrypt(voterAddress, 'secret-key').toString();
+      await contract.methods.registerVoter(encryptedAddress).send({ from: accounts[0] });
       alert('Voter registered successfully!');
     } catch (error) {
       console.error('Error registering voter:', error);
