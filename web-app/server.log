@@ -1,115 +1,22 @@
-
-> web-app@0.1.0 dev
-> next dev
-
-  ▲ Next.js 14.2.13
-  - Local:        http://localhost:3000
-
- ✓ Starting...
-Attention: Next.js now collects completely anonymous telemetry regarding usage.
-This information is used to shape Next.js' roadmap and prioritize features.
-You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-https://nextjs.org/telemetry
-
- ✓ Ready in 1726ms
- ○ Compiling / ...
- ✓ Compiled / in 7s (857 modules)
- HEAD / 200 in 7370ms
- ✓ Compiled in 555ms (390 modules)
- ✓ Compiled in 432ms (390 modules)
- ✓ Compiled in 350ms (390 modules)
- ✓ Compiled in 340ms (395 modules)
- ✓ Compiled in 429ms (390 modules)
- ✓ Compiled in 244ms (390 modules)
- ⨯ ./components/text-editor.tsx
-Error: 
-  [31mx[0m the name `useState` is defined multiple times
-    ,-[[36;1;4m/home/user/real-time-text-editor/web-app/components/text-editor.tsx[0m:1:1]
- [2m 1[0m | 
- [2m 2[0m | "use client";
- [2m 3[0m | 
- [2m 4[0m | import React, { useEffect, useState } from "react";
-    : [31;1m                           ^^^^|^^^[0m
-    :                                [31;1m`-- [31;1mprevious definition of `useState` here[0m[0m
- [2m 5[0m | import dynamic from "next/dynamic";
- [2m 6[0m | import { io } from "socket.io-client";
- [2m 7[0m | import { Button } from "@/components/ui/button";
- [2m 8[0m | import { useState } from "react";
-    : [33;1m         ^^^^|^^^[0m
-    :              [33;1m`-- [33;1m`useState` redefined here[0m[0m
- [2m 9[0m | import { Input } from "@/components/ui/input";
- [2m10[0m | import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
- [2m11[0m | import { ScrollArea } from "@/components/ui/scroll-area";
-    `----
-
-Import trace for requested module:
-./components/text-editor.tsx
- ⨯ ./components/text-editor.tsx
-Error: 
-  [31mx[0m the name `useState` is defined multiple times
-    ,-[[36;1;4m/home/user/real-time-text-editor/web-app/components/text-editor.tsx[0m:1:1]
- [2m 1[0m | 
- [2m 2[0m | "use client";
- [2m 3[0m | 
- [2m 4[0m | import React, { useEffect, useState } from "react";
-    : [31;1m                           ^^^^|^^^[0m
-    :                                [31;1m`-- [31;1mprevious definition of `useState` here[0m[0m
- [2m 5[0m | import dynamic from "next/dynamic";
- [2m 6[0m | import { io } from "socket.io-client";
- [2m 7[0m | import { Button } from "@/components/ui/button";
- [2m 8[0m | import { useState } from "react";
-    : [33;1m         ^^^^|^^^[0m
-    :              [33;1m`-- [33;1m`useState` redefined here[0m[0m
- [2m 9[0m | import { Input } from "@/components/ui/input";
- [2m10[0m | import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
- [2m11[0m | import { ScrollArea } from "@/components/ui/scroll-area";
-    `----
-
-Import trace for requested module:
-./components/text-editor.tsx
- ⨯ ./components/text-editor.tsx
-Error: 
-  [31mx[0m the name `useState` is defined multiple times
-    ,-[[36;1;4m/home/user/real-time-text-editor/web-app/components/text-editor.tsx[0m:1:1]
- [2m 1[0m | 
- [2m 2[0m | "use client";
- [2m 3[0m | 
- [2m 4[0m | import React, { useEffect, useState } from "react";
-    : [31;1m                           ^^^^|^^^[0m
-    :                                [31;1m`-- [31;1mprevious definition of `useState` here[0m[0m
- [2m 5[0m | import dynamic from "next/dynamic";
- [2m 6[0m | import { io } from "socket.io-client";
- [2m 7[0m | import { Button } from "@/components/ui/button";
- [2m 8[0m | import { useState } from "react";
-    : [33;1m         ^^^^|^^^[0m
-    :              [33;1m`-- [33;1m`useState` redefined here[0m[0m
- [2m 9[0m | import { Input } from "@/components/ui/input";
- [2m10[0m | import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
- [2m11[0m | import { ScrollArea } from "@/components/ui/scroll-area";
-    `----
-
-Import trace for requested module:
-./components/text-editor.tsx
- ⨯ ./components/text-editor.tsx
-Error: 
-  [31mx[0m the name `useState` is defined multiple times
-    ,-[[36;1;4m/home/user/real-time-text-editor/web-app/components/text-editor.tsx[0m:1:1]
- [2m 1[0m | 
- [2m 2[0m | "use client";
- [2m 3[0m | 
- [2m 4[0m | import React, { useEffect, useState } from "react";
-    : [31;1m                           ^^^^|^^^[0m
-    :                                [31;1m`-- [31;1mprevious definition of `useState` here[0m[0m
- [2m 5[0m | import dynamic from "next/dynamic";
- [2m 6[0m | import { io } from "socket.io-client";
- [2m 7[0m | import { Button } from "@/components/ui/button";
- [2m 8[0m | import { useState } from "react";
-    : [33;1m         ^^^^|^^^[0m
-    :              [33;1m`-- [33;1m`useState` redefined here[0m[0m
- [2m 9[0m | import { Input } from "@/components/ui/input";
- [2m10[0m | import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
- [2m11[0m | import { ScrollArea } from "@/components/ui/scroll-area";
-    `----
-
-Import trace for requested module:
-./components/text-editor.tsx
+(node:1029) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1029) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
+Server is running on port 4000
+Error connecting to MongoDB: MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
+    at _handleConnectionErrors (/home/user/real-time-text-editor/web-app/node_modules/mongoose/lib/connection.js:909:11)
+    at NativeConnection.openUri (/home/user/real-time-text-editor/web-app/node_modules/mongoose/lib/connection.js:860:11) {
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) { 'localhost:27017' => [ServerDescription] },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined
+}
