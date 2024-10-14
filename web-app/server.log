@@ -2,15 +2,21 @@
 > web-app@0.1.0 dev
 > next dev
 
- ⚠ Port 3000 is in use, trying 3001 instead.
- ⚠ Port 3001 is in use, trying 3002 instead.
- ⚠ Port 3002 is in use, trying 3003 instead.
- ⚠ Port 3003 is in use, trying 3004 instead.
- ⚠ Port 3004 is in use, trying 3005 instead.
- ⚠ Port 3005 is in use, trying 3006 instead.
- ⚠ Port 3006 is in use, trying 3007 instead.
   ▲ Next.js 14.2.13
-  - Local:        http://localhost:3007
+  - Local:        http://localhost:3000
 
  ✓ Starting...
- ✓ Ready in 1842ms
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 1649ms
+ ○ Compiling /register-voter ...
+ ✓ Compiled /register-voter in 3.5s (292 modules)
+ HEAD /register-voter 200 in 3730ms
+ ○ Compiling /cast-vote ...
+ ✓ Compiled /cast-vote in 1783ms (298 modules)
+ HEAD /cast-vote 200 in 1826ms
+ ✓ Compiled /tally-votes in 145ms (304 modules)
+ HEAD /tally-votes 200 in 166ms

@@ -28,28 +28,28 @@ export default function Sidebar() {
               </a>
             </li>
             <li>
-              <a href="#register" className="flex items-center space-x-2">
-                <UserPlusIcon className="h-6 w-6" />
-                {isOpen && <span>Register Voter</span>}
-              </a>
+<a href="/register-voter" className="flex items-center space-x-2">
+  <UserPlusIcon className="h-6 w-6" />
+  {isOpen && <span>Register Voter</span>}
+</a>
             </li>
             <li>
-              <a href="#vote" className="flex items-center space-x-2">
-                <VoteIcon className="h-6 w-6" />
-                {isOpen && <span>Cast Vote</span>}
-              </a>
+<a href="/cast-vote" className="flex items-center space-x-2">
+  <VoteIcon className="h-6 w-6" />
+  {isOpen && <span>Cast Vote</span>}
+</a>
             </li>
             <li>
-              <a href="#tally" className="flex items-center space-x-2">
-                <TallyIcon className="h-6 w-6" />
-                {isOpen && <span>Tally Votes</span>}
-              </a>
+<a href="/tally-votes" className="flex items-center space-x-2">
+  <TallyIcon className="h-6 w-6" />
+  {isOpen && <span>Tally Votes</span>}
+</a>
             </li>
             <li>
-              <a href="#info" className="flex items-center space-x-2">
-                <InfoIcon className="h-6 w-6" />
-                {isOpen && <span>Candidate Info</span>}
-              </a>
+<a href="/candidate-info" className="flex items-center space-x-2">
+  <InfoIcon className="h-6 w-6" />
+  {isOpen && <span>Candidate Info</span>}
+</a>
             </li>
           </ul>
         </nav>
