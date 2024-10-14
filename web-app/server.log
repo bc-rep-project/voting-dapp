@@ -10,3 +10,61 @@
 
  ✓ Starting...
  ✓ Ready in 2.1s
+ ○ Compiling / ...
+ ⨯ ./components/cast-vote.tsx:8:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m  6 |[39m [36mimport[39m { [33mInput[39m } [36mfrom[39m [32m"@/components/ui/input"[39m[33m;[39m[0m
+[0m [90m  7 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m"@/components/ui/label"[39m[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { toast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m[0m
+[0m [90m    |[39m [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m[0m
+[0m [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mCastVote[39m() {[0m
+[0m [90m 11 |[39m   [36mconst[39m [voterId[33m,[39m setVoterId] [33m=[39m useState([32m""[39m)[33m;[39m[0m
+
+https://nextjs.org/docs/messages/module-not-found
+ ⨯ ./components/cast-vote.tsx:8:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m  6 |[39m [36mimport[39m { [33mInput[39m } [36mfrom[39m [32m"@/components/ui/input"[39m[33m;[39m[0m
+[0m [90m  7 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m"@/components/ui/label"[39m[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { toast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m[0m
+[0m [90m    |[39m [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m[0m
+[0m [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mCastVote[39m() {[0m
+[0m [90m 11 |[39m   [36mconst[39m [voterId[33m,[39m setVoterId] [33m=[39m useState([32m""[39m)[33m;[39m[0m
+
+https://nextjs.org/docs/messages/module-not-found
+ ⨯ ./components/cast-vote.tsx:8:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m  6 |[39m [36mimport[39m { [33mInput[39m } [36mfrom[39m [32m"@/components/ui/input"[39m[33m;[39m[0m
+[0m [90m  7 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m"@/components/ui/label"[39m[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { toast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m[0m
+[0m [90m    |[39m [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m[0m
+[0m [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mCastVote[39m() {[0m
+[0m [90m 11 |[39m   [36mconst[39m [voterId[33m,[39m setVoterId] [33m=[39m useState([32m""[39m)[33m;[39m[0m
+
+https://nextjs.org/docs/messages/module-not-found
+ HEAD / 500 in 13825ms
+ ⨯ ./components/register-voter.tsx:8:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m  6 |[39m [36mimport[39m { [33mInput[39m } [36mfrom[39m [32m"@/components/ui/input"[39m[33m;[39m[0m
+[0m [90m  7 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m"@/components/ui/label"[39m[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { toast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m[0m
+[0m [90m    |[39m [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m[0m
+[0m [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRegisterVoter[39m() {[0m
+[0m [90m 11 |[39m   [36mconst[39m [voterAddress[33m,[39m setVoterAddress] [33m=[39m useState([32m""[39m)[33m;[ ⨯ ./components/register-voter.tsx:8:1
+Module not found: Can't resolve '@/components/ui/use-toast'
+[0m [90m  6 |[39m [36mimport[39m { [33mInput[39m } [36mfrom[39m [32m"@/components/ui/input"[39m[33m;[39m[0m
+[0m [90m  7 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m"@/components/ui/label"[39m[33m;[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 |[39m [36mimport[39m { toast } [36mfrom[39m [32m"@/components/ui/use-toast"[39m[33m;[39m[0m
+[0m [90m    |[39m [31m[1m^[22m[39m[0m
+[0m [90m  9 |[39m[0m
+[0m [90m 10 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRegisterVoter[39m() {[0m
+[0m [90m 11 |[39m   [36mconst[39m [voterAddress[33m,[39m setVoterAddress] [33m=[39m useState([32m""[39m)[33m;[39m[0m
+
+https://nextjs.org/docs/messages/module-not-found
+[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mRegisterVoter[39m() {[0m
+[0m [90m 11 |[39m   [36mconst[39m [voterAddress[33m,[39m setVoterAddress] [33m=[39m useState([32m""[39m)[33m;[39m[0m
+
+https://nextjs.org/docs/messages/module-not-found
