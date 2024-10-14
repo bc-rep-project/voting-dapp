@@ -3,7 +3,8 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { HomeIcon, UserPlusIcon, VoteIcon, TallyIcon, InfoIcon } from "lucide-react";
+import { HomeIcon, UserPlusIcon, VoteIcon, InfoIcon } from "lucide-react";
+import { BarChart2 as TallyIcon } from "lucide-react";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
