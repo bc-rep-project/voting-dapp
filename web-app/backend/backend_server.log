@@ -1,69 +1,14 @@
-(node:1665) [MONGODB DRIVER] Warning: useNewUrlParser is a deprecated option: useNewUrlParser has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
-(Use `node --trace-warnings ...` to show where the warning was created)
-(node:1665) [MONGODB DRIVER] Warning: useUnifiedTopology is a deprecated option: useUnifiedTopology has no effect since Node.js Driver version 4.0.0 and will be removed in the next major version
-Server is running on http://localhost:3002
-/home/user/real-time-text-editor/web-app/backend/node_modules/mongoose/lib/connection.js:909
-    err = new ServerSelectionError();
-          ^
+/home/user/real-time-text-editor/web-app/backend/server.js:55
+const Document = mongoose.model('Document', documentSchema);
+      ^
 
-MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017
-    at _handleConnectionErrors (/home/user/real-time-text-editor/web-app/backend/node_modules/mongoose/lib/connection.js:909:11)
-    at NativeConnection.openUri (/home/user/real-time-text-editor/web-app/backend/node_modules/mongoose/lib/connection.js:860:11) {
-  reason: TopologyDescription {
-    type: 'Unknown',
-    servers: Map(1) {
-      'localhost:27017' => ServerDescription {
-        address: 'localhost:27017',
-        type: 'Unknown',
-        hosts: [],
-        passives: [],
-        arbiters: [],
-        tags: {},
-        minWireVersion: 0,
-        maxWireVersion: 0,
-        roundTripTime: -1,
-        minRoundTripTime: 0,
-        lastUpdateTime: 1078335,
-        lastWriteDate: 0,
-        error: MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017
-            at connectionFailureError (/home/user/real-time-text-editor/web-app/backend/node_modules/mongodb/lib/cmap/connect.js:356:20)
-            at Socket.<anonymous> (/home/user/real-time-text-editor/web-app/backend/node_modules/mongodb/lib/cmap/connect.js:272:44)
-            at Object.onceWrapper (node:events:634:26)
-            at Socket.emit (node:events:519:28)
-            at emitErrorNT (node:internal/streams/destroy:169:8)
-            at emitErrorCloseNT (node:internal/streams/destroy:128:3)
-            at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-          [Symbol(errorLabels)]: Set(1) { 'ResetPool' },
-          [cause]: Error: connect ECONNREFUSED 127.0.0.1:27017
-              at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16) {
-            errno: -111,
-            code: 'ECONNREFUSED',
-            syscall: 'connect',
-            address: '127.0.0.1',
-            port: 27017
-          }
-        },
-        topologyVersion: null,
-        setName: null,
-        setVersion: null,
-        electionId: null,
-        logicalSessionTimeoutMinutes: null,
-        primary: null,
-        me: null,
-        '$clusterTime': null
-      }
-    },
-    stale: false,
-    compatible: true,
-    heartbeatFrequencyMS: 10000,
-    localThresholdMS: 15,
-    setName: null,
-    maxElectionId: null,
-    maxSetVersion: null,
-    commonWireVersion: 0,
-    logicalSessionTimeoutMinutes: null
-  },
-  code: undefined
-}
+SyntaxError: Identifier 'Document' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1378:20)
+    at Module._compile (node:internal/modules/cjs/loader:1428:41)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)
+    at Module.load (node:internal/modules/cjs/loader:1288:32)
+    at Module._load (node:internal/modules/cjs/loader:1104:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49
 
 Node.js v20.17.0

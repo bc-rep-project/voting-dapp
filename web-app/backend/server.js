@@ -15,6 +15,41 @@ mongoose.connect('mongodb://localhost:27017/realtime-text-editor', {
 const documentSchema = new mongoose.Schema({
   content: String,
   version: Number,
+  lastModified: Date,
+  history: [
+    {
+      content: String,
+      version: Number,
+      modifiedAt: Date,
+    },
+  ],
+});
+
+
+
+const Document = mongoose.model('Document', documentSchema);
+
+wss.on('connection', (ws) => {
+  console.log('New client connected');
+  ws.on('message', async (message) => {
+    const { type, data } = JSON.parse(message);
+    if (type === 'document') {
+      const { content, version } = data;
+      const doc = await Document.findOne();
+      if (doc.version === version) {
+        doc.content = content;
+        doc.version += 1;
+        doc.lastModified = new Date();
+        await doc.save();
+        ws.send(JSON.stringify({ type: 'document', data: doc }));
+      } else {
+        ws.send(JSON.stringify({ type: 'conflict', data: doc }));
+      }
+    }
+  });
+  ws.on('close', () => {
+    console.log('Client disconnected');
+  });
 });
 
 const Document = mongoose.model('Document', documentSchema);

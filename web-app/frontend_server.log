@@ -14,3 +14,101 @@
  GET / 200 in 39ms
  ✓ Compiled /favicon.ico in 395ms (467 modules)
  GET /favicon.ico 200 in 505ms
+ ✓ Compiled in 2.1s (826 modules)
+ ✓ Compiled in 347ms (826 modules)
+ ⨯ ./components/text-editor.tsx
+Error: 
+  [31mx[0m the name `useState` is defined multiple times
+    ,-[[36;1;4m/home/user/real-time-text-editor/web-app/components/text-editor.tsx[0m:1:1]
+ [2m 1[0m | 
+ [2m 2[0m | "use client";
+ [2m 3[0m | 
+ [2m 4[0m | import React, { useEffect, useState } from "react";
+    : [31;1m                           ^^^^|^^^[0m
+    :                                [31;1m`-- [31;1mprevious definition of `useState` here[0m[0m
+ [2m 5[0m | import dynamic from "next/dynamic";
+ [2m 6[0m | import { io } from "socket.io-client";
+ [2m 7[0m | import { Button } from "@/components/ui/button";
+ [2m 8[0m | import { useState } from "react";
+    : [33;1m         ^^^^|^^^[0m
+    :              [33;1m`-- [33;1m`useState` redefined here[0m[0m
+ [2m 9[0m | import { Input } from "@/components/ui/input";
+ [2m10[0m | import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+ [2m11[0m | import { ScrollArea } from "@/components/ui/scroll-area";
+    `----
+
+Import trace for requested module:
+./components/text-editor.tsx
+./app/page.tsx
+ ⨯ ./components/text-editor.tsx
+Error: 
+  [31mx[0m the name `useState` is defined multiple times
+    ,-[[36;1;4m/home/user/real-time-text-editor/web-app/components/text-editor.tsx[0m:1:1]
+ [2m 1[0m | 
+ [2m 2[0m | "use client";
+ [2m 3[0m | 
+ [2m 4[0m | import React, { useEffect, useState } from "react";
+    : [31;1m                           ^^^^|^^^[0m
+    :                                [31;1m`-- [31;1mprevious definition of `useState` here[0m[0m
+ [2m 5[0m | import dynamic from "next/dynamic";
+ [2m 6[0m | import { io } from "socket.io-client";
+ [2m 7[0m | import { Button } from "@/components/ui/button";
+ [2m 8[0m | import { useState } from "react";
+    : [33;1m         ^^^^|^^^[0m
+    :              [33;1m`-- [33;1m`useState` redefined here[0m[0m
+ [2m 9[0m | import { Input } from "@/components/ui/input";
+ [2m10[0m | import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+ [2m11[0m | import { ScrollArea } from "@/components/ui/scroll-area";
+    `----
+
+Import trace for requested module:
+./components/text-editor.tsx
+./app/page.tsx
+ ⨯ ./components/text-editor.tsx
+Error: 
+  [31mx[0m the name `useState` is defined multiple times
+    ,-[[36;1;4m/home/user/real-time-text-editor/web-app/components/text-editor.tsx[0m:1:1]
+ [2m 1[0m | 
+ [2m 2[0m | "use client";
+ [2m 3[0m | 
+ [2m 4[0m | import React, { useEffect, useState } from "react";
+    : [31;1m                           ^^^^|^^^[0m
+    :                                [31;1m`-- [31;1mprevious definition of `useState` here[0m[0m
+ [2m 5[0m | import dynamic from "next/dynamic";
+ [2m 6[0m | import { io } from "socket.io-client";
+ [2m 7[0m | import { Button } from "@/components/ui/button";
+ [2m 8[0m | import { useState } from "react";
+    : [33;1m         ^^^^|^^^[0m
+    :              [33;1m`-- [33;1m`useState` redefined here[0m[0m
+ [2m 9[0m | import { Input } from "@/components/ui/input";
+ [2m10[0m | import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+ [2m11[0m | import { ScrollArea } from "@/components/ui/scroll-area";
+    `----
+
+Import trace for requested module:
+./components/text-editor.tsx
+./app/page.tsx
+ ⨯ ./components/text-editor.tsx
+Error: 
+  [31mx[0m the name `useState` is defined multiple times
+    ,-[[36;1;4m/home/user/real-time-text-editor/web-app/components/text-editor.tsx[0m:1:1]
+ [2m 1[0m | 
+ [2m 2[0m | "use client";
+ [2m 3[0m | 
+ [2m 4[0m | import React, { useEffect, useState } from "react";
+    : [31;1m                           ^^^^|^^^[0m
+    :                                [31;1m`-- [31;1mprevious definition of `useState` here[0m[0m
+ [2m 5[0m | import dynamic from "next/dynamic";
+ [2m 6[0m | import { io } from "socket.io-client";
+ [2m 7[0m | import { Button } from "@/components/ui/button";
+ [2m 8[0m | import { useState } from "react";
+    : [33;1m         ^^^^|^^^[0m
+    :              [33;1m`-- [33;1m`useState` redefined here[0m[0m
+ [2m 9[0m | import { Input } from "@/components/ui/input";
+ [2m10[0m | import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+ [2m11[0m | import { ScrollArea } from "@/components/ui/scroll-area";
+    `----
+
+Import trace for requested module:
+./components/text-editor.tsx
+./app/page.tsx
