@@ -13,8 +13,6 @@ export default function Home() {
       <div className="flex-1 p-4">
         <section id="home">
           <HomePage />
-        <section id="home">
-          <HomePage />
         </section>
       </div>
     </div>
