@@ -40,7 +40,14 @@ wss.on('connection', (ws) => {
         doc.content = content;
         doc.version += 1;
         doc.lastModified = new Date();
+
+        doc.history.push({
+            content: doc.content,
+            version: doc.version,
+            modifiedAt: doc.lastModified
+        });
         await doc.save();
+        console.log('Document history:', doc.history);
         ws.send(JSON.stringify({ type: 'document', data: doc }));
       } else {
         ws.send(JSON.stringify({ type: 'conflict', data: doc }));
