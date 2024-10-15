@@ -28,9 +28,9 @@ const socket = io("http://localhost:3002");
 export default function TextEditor() {
   const [content, setContent] = useState("");
   const [messages, setMessages] = useState([]);
-   const [inputMessage, setInputMessage] = useState("");
-   const [history, setHistory] = useState([]);
-   const [showHistory, setShowHistory] = useState(false);
+  const [inputMessage, setInputMessage] = useState("");
+  const [history, setHistory] = useState([]);
+  const [showHistory, setShowHistory] = useState(false);
 
    const fetchHistory = () => {
      socket.emit("getHistory");

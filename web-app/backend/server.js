@@ -83,7 +83,7 @@ app.post('/documents', async (req, res) => {
 
 app.put('/documents/:id', async (req, res) => {
   const { content, version } = req.body;
-  const document = await Document.findByPk(req.params.id);
+const document = await Document.findByPk(req.params.id);
   if (document.version === version) {
     document.content = content;
     document.version += 1;
