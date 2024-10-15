@@ -5,29 +5,29 @@ const port = 3002;
 const WebSocket = require('ws');
 const server = require('http').createServer(app);
 const wss = new WebSocket.Server({ server });
-const mongoose = require('mongoose');
+const { Sequelize, DataTypes } = require('sequelize');
+const sequelize = new Sequelize('sqlite::memory:');
 
-mongoose.connect('mongodb://localhost:27017/realtime-text-editor', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+const Document = sequelize.define('Document', {
+  content: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  version: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  lastModified: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
+  history: {
+    type: DataTypes.JSON,
+    allowNull: false,
+  },
 });
 
-const documentSchema = new mongoose.Schema({
-  content: String,
-  version: Number,
-  lastModified: Date,
-  history: [
-    {
-      content: String,
-      version: Number,
-      modifiedAt: Date,
-    },
-  ],
-});
-
-
-
-const Document = mongoose.model('Document', documentSchema);
+sequelize.sync();
 
 wss.on('connection', (ws) => {
   console.log('New client connected');
@@ -72,8 +72,50 @@ wss.on('connection', (ws) => {
   });
 });
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+app.use(express.json());
+
+app.post('/documents', async (req, res) => {
+  const { content, version } = req.body;
+  const newDocument = new Document({ content, version, lastModified: new Date(), history: [{ content, version, modifiedAt: new Date() }] });
+  await newDocument.save();
+  res.status(201).send(newDocument);
+});
+
+app.put('/documents/:id', async (req, res) => {
+  const { content, version } = req.body;
+  const document = await Document.findByPk(req.params.id);
+  if (document.version === version) {
+    document.content = content;
+    document.version += 1;
+    document.lastModified = new Date();
+    const history = document.history || [];
+    history.push({ content: document.content, version: document.version, modifiedAt: document.lastModified });
+    document.history = history;
+    await document.save();
+    res.send(document);
+  } else {
+    res.status(409).send({ error: 'Version conflict' });
+  }
+});
+
+app.get('/documents/:id/history', async (req, res) => {
+  const document = await Document.findByPk(req.params.id);
+  res.send(document.history);
+});
+
+app.put('/documents/:id/revert', async (req, res) => {
+  const { version } = req.body;
+  const document = await Document.findByPk(req.params.id);
+  const historyItem = document.history.find(item => item.version === version);
+  if (historyItem) {
+    document.content = historyItem.content;
+    document.version = version;
+    document.lastModified = new Date();
+    await document.save();
+    res.send(document);
+  } else {
+    res.status(404).send({ error: 'Version not found' });
+  }
 });
 
 server.listen(port, () => {
