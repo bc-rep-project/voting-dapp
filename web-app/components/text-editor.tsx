@@ -97,7 +97,7 @@ export default function TextEditor() {
          </CardContent>
        </Card>
        <div style={{ textAlign: 'left' }}>
-         <Button onClick={fetchHistory}>Show Version History</Button>
+
        </div>
       {showHistory && (
         <div className="version-history">

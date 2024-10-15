@@ -52,7 +52,7 @@ wss.on('connection', (ws) => {
   });
 });
 
-const Document = mongoose.model('Document', documentSchema);
+
 
 wss.on('connection', (ws) => {
   console.log('New client connected');
