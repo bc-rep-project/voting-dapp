@@ -74,6 +74,16 @@ wss.on('connection', (ws) => {
 
 app.use(express.json());
 
+app.post('/chat', (req, res) => {
+  const { message } = req.body;
+  wss.clients.forEach(client => {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(JSON.stringify({ type: 'chat', message }));
+    }
+  });
+  res.status(200).send({ status: 'Message sent' });
+});
+
 app.post('/documents', async (req, res) => {
   const { content, version } = req.body;
   const newDocument = new Document({ content, version, lastModified: new Date(), history: [{ content, version, modifiedAt: new Date() }] });
