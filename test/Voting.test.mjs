@@ -19,7 +19,7 @@ describe("Voting Contract", function () {
 
   it("Should register a voter", async function () {
     await voting.registerVoter(addr1.address);
-    const voterId = ethers.utils.keccak256(ethers.utils.defaultAbiCoder.encode(["address"], [addr1.address]));
+    const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
     const voter = await voting.voters(voterId);
     expect(voter.voterId).to.equal(voterId);
     expect(voter.hasVoted).to.equal(false);
@@ -36,7 +36,7 @@ describe("Voting Contract", function () {
 
   it("Should allow a voter to cast a vote", async function () {
     await voting.registerVoter(addr1.address);
-    const voterId = ethers.utils.keccak256(ethers.utils.defaultAbiCoder.encode(["address"], [addr1.address]));
+    const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
     await voting.castVote(voterId, ethers.utils.formatBytes32String("1"));
     const voter = await voting.voters(voterId);
     expect(voter.hasVoted).to.equal(true);
@@ -45,13 +45,15 @@ describe("Voting Contract", function () {
 
   it("Should not allow a voter to vote twice", async function () {
     await voting.registerVoter(addr1.address);
-    const voterId = ethers.utils.keccak256(ethers.utils.defaultAbiCoder.encode(["address"], [addr1.address]));
+    const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
     await voting.castVote(voterId, ethers.utils.formatBytes32String("1"));
-await expect(voting.castVote(voterId, ethers.utils.formatBytes32String("2"))).to.be.revertedWith("Voter has already voted");
+    await expect(
+      voting.castVote(voterId, ethers.utils.formatBytes32String("2"))
+    ).to.be.revertedWith("Voter has already voted.");
   });
 
   it("Should not allow unregistered voter to vote", async function () {
-    const voterId = ethers.utils.keccak256(ethers.utils.defaultAbiCoder.encode(["address"], [addr1.address]));
+    const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
     await expect(voting.castVote(voterId, ethers.utils.formatBytes32String("1"))).to.be.revertedWith("Voter is not registered.");
   });
 });

@@ -9,12 +9,20 @@ import "@/components/styles/ViewVoter.css";
 
 export default function ViewVoter() {
   const [voterAddress, setVoterAddress] = useState("");
-  const [voterDetails, setVoterDetails] = useState(null);
+  const [voterDetails, setVoterDetails] = useState<{
+    address: string;
+    hasVoted: boolean;
+    vote: string;
+  } | null>(null);
 
   const fetchVoterDetails = async () => {
     const contract = new web3.eth.Contract(Voting.abi, "0x5FbDB2315678afecb367f032d93F642f64180aa3"); // Replace with your contract address
     try {
-      const details = await contract.methods.getVoterDetails(voterAddress).call();
+      const details = (await contract.methods.getVoterDetails(voterAddress).call()) as {
+        address: string;
+        hasVoted: boolean;
+        vote: string;
+      };
       setVoterDetails(details);
     } catch (error) {
       console.error("Error fetching voter details:", error);

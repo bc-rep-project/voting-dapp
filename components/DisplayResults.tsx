@@ -2,26 +2,15 @@
 "use client";
 
 import { useState } from "react";
-import web3 from "../utils/web3";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import "@/components/styles/DisplayResults.css";
-import Voting from "../contracts/Voting.json"; // Assuming ABI is available
 
 export default function DisplayResults() {
-  const [results, setResults] = useState([]);
-  const [error, setError] = useState(null);
+  const [results, setResults] = useState<{ candidate: string; votes: number }[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   const tallyVotes = async () => {
-    let accounts;
-    try {
-      accounts = await web3.eth.getAccounts();
-    } catch (error) {
-      console.error("Error fetching accounts:", error);
-      setError("Error fetching accounts. Please check your connection and try again.");
-      return;
-    }
-    const contract = new web3.eth.Contract(Voting.abi, "0x5FbDB2315678afecb367f032d93F642f64180aa3"); // Replace with your contract address
 
     try {
       // Placeholder for tallying votes
@@ -45,6 +34,15 @@ export default function DisplayResults() {
 
       {error && <div className="error-message">{error}</div>}
       <Button onClick={tallyVotes} className="button tally-button" style={{ marginBottom: '20px' }}>Tally Votes</Button>
+      {results.length > 0 && (
+        <ul className="results-list">
+          {results.map((item, idx) => (
+            <li key={idx} className="result-item">
+              {item.candidate}: {item.votes}
+            </li>
+          ))}
+        </ul>
+      )}
       <div className="button-container">
         <Link href="/components/voting-interface">
           <Button className="back-button tally-button">Back</Button>

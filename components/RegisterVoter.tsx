@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import web3 from "../utils/web3";
+import type Web3 from "web3";
 import { Button } from "@/components/ui/button";
 import "@/components/styles/RegisterVoter.css"; // Import custom CSS
 import { Input } from "@/components/ui/input";
@@ -12,13 +13,17 @@ import Link from "next/link"; // Import Link
 
 export default function RegisterVoter() {
   const [voterAddress, setVoterAddress] = useState("");
+  const typedWeb3 = web3 as unknown as Web3;
 
-  const registerVoter = async (event) => {
+  const registerVoter = async (event: React.FormEvent) => {
     event.preventDefault();
     console.log("Fetching accounts...");
-    const accounts = await web3.eth.getAccounts();
+    const accounts = await typedWeb3.eth.getAccounts();
     console.log("Accounts fetched:", accounts);
-     const contract = new web3.eth.Contract(Voting.abi, "0x5FbDB2315678afecb367f032d93F642f64180aa3"); // Replace with your contract address
+     const contract = new typedWeb3.eth.Contract(
+       Voting.abi,
+       "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+     ); // Replace with your contract address
 
     try {
       await contract.methods.registerVoter(voterAddress).send({ from: accounts[0] });
