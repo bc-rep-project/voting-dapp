@@ -17,7 +17,7 @@ export default function Dashboard() {
     viewAllVoters: false,
   });
 
-  const handleClick = (button) => {
+  const handleClick = (button: string) => {
     setLoading((prevState) => ({ ...prevState, [button]: true }));
   };
 

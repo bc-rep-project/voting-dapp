@@ -1,7 +1,5 @@
 
 import ConnectWallet from "@/components/ConnectWallet";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 export default function ConnectWalletPage() {
   return (
