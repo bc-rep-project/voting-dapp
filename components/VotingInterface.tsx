@@ -24,7 +24,7 @@ export default function VotingInterface() {
     const contract = new web3.eth.Contract(Voting.abi, "0x5FbDB2315678afecb367f032d93F642f64180aa3"); // Replace with your contract address
 
     try {
-      const voterId = web3.utils.keccak256(accounts[0]);
+      const voterId = web3.utils.soliditySha3({ type: "address", value: accounts[0] });
       const encryptedVote = web3.utils.asciiToHex(selectedCandidate);
       await contract.methods.castVote(voterId, encryptedVote).send({ from: accounts[0] });
       console.log("Vote cast successfully by:", accounts[0]);
