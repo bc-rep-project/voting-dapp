@@ -50,7 +50,7 @@ export default function Dashboard() {
             {loading.viewVoter ? "Loading..." : "View Voter"}
           </Button>
         </Link>
-        <Link href="/app/view-all-voters">
+        <Link href="/components/view-all-voter">
           <Button className="dashboard-button" onClick={() => handleClick("viewAllVoters")}>
             {loading.viewAllVoters ? "Loading..." : "View All Voters"}
           </Button>
