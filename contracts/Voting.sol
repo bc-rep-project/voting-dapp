@@ -20,6 +20,9 @@ contract Voting is Ownable {
     constructor() Ownable(msg.sender) {}
     mapping(bytes32 => Voter) public voters; // Mapping voterId to Voter struct
     mapping(string => Candidate) public candidates; // Mapping candidateId to Candidate struct
+    address[] private voterAddresses; // Track all registered voter addresses
+    string[] private candidateIds; // Track all candidate identifiers
+    mapping(string => uint256) public voteCounts; // Track vote count per candidate
 
     event VoterRegistered(bytes32 voterId);
     event VoteCast(bytes32 voterId, bytes32 vote);
@@ -27,7 +30,9 @@ contract Voting is Ownable {
     event ResultsAnnounced(string candidateId, uint256 voteCount);
 
     function addCandidate(string memory _candidateId, string memory _name, string memory _description, string memory _imageUrl) public onlyOwner {
+        require(bytes(candidates[_candidateId].candidateId).length == 0, "Candidate already exists");
         candidates[_candidateId] = Candidate(_candidateId, _name, _description, _imageUrl);
+        candidateIds.push(_candidateId);
         emit CandidateAdded(_candidateId);
     }
 
@@ -35,6 +40,7 @@ contract Voting is Ownable {
         bytes32 voterId = keccak256(abi.encodePacked(_voterAddress));
         require(voters[voterId].voterId == bytes32(0), "Voter is already registered.");
         voters[voterId] = Voter(voterId, false, bytes32(0));
+        voterAddresses.push(_voterAddress);
         emit VoterRegistered(voterId);
     }
 
@@ -47,9 +53,45 @@ contract Voting is Ownable {
     }
 
     function tallyVotes() public onlyOwner {
-        // Placeholder for tallying votes
-        // Decryption and counting logic to be implemented
-        // Emit ResultsAnnounced event for each candidate
+        // Reset previous counts
+        for (uint256 i = 0; i < candidateIds.length; i++) {
+            voteCounts[candidateIds[i]] = 0;
+        }
+
+        // Count votes from all registered voters
+        for (uint256 i = 0; i < voterAddresses.length; i++) {
+            bytes32 voterId = keccak256(abi.encodePacked(voterAddresses[i]));
+            Voter memory voter = voters[voterId];
+            if (voter.hasVoted) {
+                string memory candidateId = _bytes32ToString(voter.vote);
+                voteCounts[candidateId] += 1;
+            }
+        }
+
+        // Emit event with results for each candidate
+        for (uint256 i = 0; i < candidateIds.length; i++) {
+            emit ResultsAnnounced(candidateIds[i], voteCounts[candidateIds[i]]);
+        }
+    }
+
+    function getAllVoters() public view returns (address[] memory) {
+        return voterAddresses;
+    }
+
+    function getAllCandidates() public view returns (string[] memory) {
+        return candidateIds;
+    }
+
+    function _bytes32ToString(bytes32 _bytes32) internal pure returns (string memory) {
+        uint8 i = 0;
+        while(i < 32 && _bytes32[i] != 0) {
+            i++;
+        }
+        bytes memory bytesArray = new bytes(i);
+        for(uint8 j = 0; j < i; j++) {
+            bytesArray[j] = _bytes32[j];
+        }
+        return string(bytesArray);
     }
 
     function getCandidateInfo(string memory candidateId) public view returns (string memory, string memory, string memory) {

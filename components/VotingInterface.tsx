@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import web3 from "../utils/web3";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -10,14 +10,34 @@ import { CONTRACT_ADDRESS } from "@/config";
 import "@/components/styles/VotingInterface.css";
 import Link from "next/link";
 
-const candidates = [
-  { id: "1", name: "Alice" },
-  { id: "2", name: "Bob" },
-  { id: "3", name: "Charlie" },
-];
+interface Candidate {
+  id: string;
+  name: string;
+}
 
 export default function VotingInterface() {
   const [selectedCandidate, setSelectedCandidate] = useState("");
+  const [candidates, setCandidates] = useState<Candidate[]>([]);
+
+  useEffect(() => {
+    const fetchCandidates = async () => {
+      const contract = new web3.eth.Contract(Voting.abi, CONTRACT_ADDRESS);
+      try {
+        const ids = (await contract.methods.getAllCandidates().call()) as string[];
+        const infos = (await Promise.all(
+          ids.map((id) => contract.methods.getCandidateInfo(id).call())
+        )) as unknown as [string, string, string][];
+        const list: Candidate[] = ids.map((id, idx) => {
+          const info = infos[idx];
+          return { id, name: info[0] };
+        });
+        setCandidates(list);
+      } catch (err) {
+        console.error("Error fetching candidates", err);
+      }
+    };
+    fetchCandidates();
+  }, []);
 
   const castVote = async (event: React.FormEvent) => {
     event.preventDefault();
