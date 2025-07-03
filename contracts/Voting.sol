@@ -51,4 +51,11 @@ contract Voting {
         Candidate memory candidate = candidates[candidateId];
         return (candidate.name, candidate.description, candidate.imageUrl);
     }
+
+    function getVoterDetails(address _voterAddress) public view returns (address, bool, bytes32) {
+        bytes32 voterId = keccak256(abi.encodePacked(_voterAddress));
+        Voter memory voter = voters[voterId];
+        require(voter.voterId != bytes32(0), "Voter is not registered.");
+        return (_voterAddress, voter.hasVoted, voter.vote);
+    }
 }

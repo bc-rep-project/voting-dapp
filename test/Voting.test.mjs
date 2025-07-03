@@ -20,9 +20,9 @@ describe("Voting Contract", function () {
   it("Should register a voter", async function () {
     await voting.registerVoter(addr1.address);
     const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
-    const voter = await voting.voters(voterId);
-    expect(voter.voterId).to.equal(voterId);
-    expect(voter.hasVoted).to.equal(false);
+    const [returnedAddr, hasVoted] = await voting.getVoterDetails(addr1.address);
+    expect(returnedAddr).to.equal(addr1.address);
+    expect(hasVoted).to.equal(false);
   });
 
   it("Should add a candidate", async function () {
@@ -55,5 +55,17 @@ describe("Voting Contract", function () {
   it("Should not allow unregistered voter to vote", async function () {
     const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
     await expect(voting.castVote(voterId, ethers.utils.formatBytes32String("1"))).to.be.revertedWith("Voter is not registered.");
+  });
+
+  it("Should get voter details for registered voter", async function () {
+    await voting.registerVoter(addr1.address);
+    const [returnedAddr, hasVoted, vote] = await voting.getVoterDetails(addr1.address);
+    expect(returnedAddr).to.equal(addr1.address);
+    expect(hasVoted).to.equal(false);
+    expect(vote).to.equal(ethers.constants.HashZero);
+  });
+
+  it("Should revert when getting details for unregistered voter", async function () {
+    await expect(voting.getVoterDetails(addr2.address)).to.be.revertedWith("Voter is not registered.");
   });
 });
