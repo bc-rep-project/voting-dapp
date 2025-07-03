@@ -23,10 +23,12 @@ contract Voting is Ownable {
 
     event VoterRegistered(bytes32 voterId);
     event VoteCast(bytes32 voterId, bytes32 vote);
+    event CandidateAdded(string candidateId);
     event ResultsAnnounced(string candidateId, uint256 voteCount);
 
     function addCandidate(string memory _candidateId, string memory _name, string memory _description, string memory _imageUrl) public onlyOwner {
         candidates[_candidateId] = Candidate(_candidateId, _name, _description, _imageUrl);
+        emit CandidateAdded(_candidateId);
     }
 
     function registerVoter(address _voterAddress) public onlyOwner {
