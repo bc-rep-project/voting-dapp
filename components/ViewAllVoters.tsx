@@ -6,13 +6,18 @@ import web3 from "../utils/web3";
 import Voting from "../contracts/Voting.json"; // Assuming ABI is available
 import "../components/styles/ViewAllVoters.css";
 
+const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as string;
+
 export default function ViewAllVoters() {
   const [voters, setVoters] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchVoters = async () => {
-      const contract = new web3.eth.Contract(Voting.abi, "0x5FbDB2315678afecb367f032d93F642f64180aa3"); // Replace with your contract address
+      const contract = new web3.eth.Contract(
+        Voting.abi,
+        CONTRACT_ADDRESS
+      );
       try {
         const voterList = (await contract.methods.getAllVoters().call()) as string[];
         setVoters(voterList);

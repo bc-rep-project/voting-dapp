@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import Voting from "../contracts/Voting.json"; // Assuming ABI is available
 import "@/components/styles/ViewVoter.css";
 
+const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as string;
+
 export default function ViewVoter() {
   const [voterAddress, setVoterAddress] = useState("");
   const [voterDetails, setVoterDetails] = useState<{
@@ -16,7 +18,10 @@ export default function ViewVoter() {
   } | null>(null);
 
   const fetchVoterDetails = async () => {
-    const contract = new web3.eth.Contract(Voting.abi, "0x5FbDB2315678afecb367f032d93F642f64180aa3"); // Replace with your contract address
+    const contract = new web3.eth.Contract(
+      Voting.abi,
+      CONTRACT_ADDRESS
+    );
     try {
       const details = (await contract.methods.getVoterDetails(voterAddress).call()) as {
         address: string;

@@ -11,6 +11,8 @@ import { Label } from "@/components/ui/label";
 import Voting from "../contracts/Voting.json"; // Assuming ABI is available
 import Link from "next/link"; // Import Link
 
+const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as string;
+
 export default function RegisterVoter() {
   const [voterAddress, setVoterAddress] = useState("");
   const typedWeb3 = web3 as unknown as Web3;
@@ -20,10 +22,10 @@ export default function RegisterVoter() {
     console.log("Fetching accounts...");
     const accounts = await typedWeb3.eth.getAccounts();
     console.log("Accounts fetched:", accounts);
-     const contract = new typedWeb3.eth.Contract(
-       Voting.abi,
-       "0x5FbDB2315678afecb367f032d93F642f64180aa3"
-     ); // Replace with your contract address
+    const contract = new typedWeb3.eth.Contract(
+      Voting.abi,
+      CONTRACT_ADDRESS
+    );
 
     try {
       await contract.methods.registerVoter(voterAddress).send({ from: accounts[0] });

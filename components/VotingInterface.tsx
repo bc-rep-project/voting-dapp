@@ -9,6 +9,8 @@ import Voting from "../contracts/Voting.json"; // Assuming ABI is available
 import "@/components/styles/VotingInterface.css";
 import Link from "next/link";
 
+const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as string;
+
 const candidates = [
   { id: "1", name: "Alice" },
   { id: "2", name: "Bob" },
@@ -21,7 +23,10 @@ export default function VotingInterface() {
   const castVote = async (event: React.FormEvent) => {
     event.preventDefault();
     const accounts = await web3.eth.getAccounts();
-    const contract = new web3.eth.Contract(Voting.abi, "0x5FbDB2315678afecb367f032d93F642f64180aa3"); // Replace with your contract address
+    const contract = new web3.eth.Contract(
+      Voting.abi,
+      CONTRACT_ADDRESS
+    );
 
     try {
       const voterId = web3.utils.soliditySha3({ type: "address", value: accounts[0] });
