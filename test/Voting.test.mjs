@@ -43,6 +43,40 @@ describe("Voting Contract", function () {
     expect(voter.vote).to.equal(ethers.utils.formatBytes32String("1"));
   });
 
+  it("Should increment candidate vote count", async function () {
+    await voting.addCandidate("1", "Alice", "Desc", "img");
+    await voting.registerVoter(addr1.address);
+    const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
+    await voting.castVote(voterId, ethers.utils.formatBytes32String("1"));
+    const count = await voting.candidateVotes("1");
+    expect(count).to.equal(1);
+  });
+
+  it("Should emit ResultsAnnounced events with totals", async function () {
+    await voting.addCandidate("1", "Alice", "Desc", "img");
+    await voting.addCandidate("2", "Bob", "Desc", "img");
+    await voting.registerVoter(addr1.address);
+    await voting.registerVoter(addr2.address);
+
+    const id1 = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
+    const id2 = ethers.utils.solidityKeccak256(["address"], [addr2.address]);
+
+    await voting.castVote(id1, ethers.utils.formatBytes32String("1"));
+    await voting.castVote(id2, ethers.utils.formatBytes32String("2"));
+
+    const tx = await voting.tallyVotes();
+    const receipt = await tx.wait();
+
+    const results = receipt.events
+      .filter((e) => e.event === "ResultsAnnounced")
+      .map((e) => [e.args.candidateId, e.args.voteCount.toNumber()]);
+
+    expect(results).to.deep.include.members([
+      ["1", 1],
+      ["2", 1],
+    ]);
+  });
+
   it("Should not allow a voter to vote twice", async function () {
     await voting.registerVoter(addr1.address);
     const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
