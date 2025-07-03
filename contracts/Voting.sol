@@ -17,6 +17,7 @@ struct Candidate {
 contract Voting {
     mapping(bytes32 => Voter) public voters; // Mapping voterId to Voter struct
     mapping(string => Candidate) public candidates; // Mapping candidateId to Candidate struct
+    address[] private voterAddresses; // List of registered voter addresses
 
     event VoterRegistered(bytes32 voterId);
     event VoteCast(bytes32 voterId, bytes32 vote);
@@ -30,6 +31,7 @@ contract Voting {
         bytes32 voterId = keccak256(abi.encodePacked(_voterAddress));
         require(voters[voterId].voterId == bytes32(0), "Voter is already registered.");
         voters[voterId] = Voter(voterId, false, bytes32(0));
+        voterAddresses.push(_voterAddress);
         emit VoterRegistered(voterId);
     }
 
@@ -50,5 +52,15 @@ contract Voting {
     function getCandidateInfo(string memory candidateId) public view returns (string memory, string memory, string memory) {
         Candidate memory candidate = candidates[candidateId];
         return (candidate.name, candidate.description, candidate.imageUrl);
+    }
+
+    function getAllVoters() public view returns (address[] memory) {
+        return voterAddresses;
+    }
+
+    function getVoterDetails(address _voterAddress) public view returns (bytes32, bool, bytes32) {
+        bytes32 voterId = keccak256(abi.encodePacked(_voterAddress));
+        Voter memory voter = voters[voterId];
+        return (voter.voterId, voter.hasVoted, voter.vote);
     }
 }

@@ -56,4 +56,20 @@ describe("Voting Contract", function () {
     const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
     await expect(voting.castVote(voterId, ethers.utils.formatBytes32String("1"))).to.be.revertedWith("Voter is not registered.");
   });
+
+  it("Should return all registered voters", async function () {
+    await voting.registerVoter(addr1.address);
+    await voting.registerVoter(addr2.address);
+    const voters = await voting.getAllVoters();
+    expect(voters).to.deep.equal([addr1.address, addr2.address]);
+  });
+
+  it("Should return voter details", async function () {
+    await voting.registerVoter(addr1.address);
+    const details = await voting.getVoterDetails(addr1.address);
+    const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
+    expect(details[0]).to.equal(voterId);
+    expect(details[1]).to.equal(false);
+    expect(details[2]).to.equal(ethers.constants.HashZero);
+  });
 });
