@@ -54,6 +54,12 @@ describe("Voting Contract", function () {
     expect(hasVoted).to.equal(false);
   });
 
+  it("Should not allow non-owner to register a voter", async function () {
+    await expect(
+      voting.connect(addr1).registerVoter(addr2.address)
+    ).to.be.reverted;
+  });
+
   it("Should add a candidate", async function () {
     await voting.addCandidate("1", "Alice", "Description of Alice", "http://example.com/alice.jpg");
     const candidate = await voting.candidates("1");

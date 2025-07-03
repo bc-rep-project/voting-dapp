@@ -29,7 +29,7 @@ contract Voting is Ownable {
         candidates[_candidateId] = Candidate(_candidateId, _name, _description, _imageUrl);
     }
 
-    function registerVoter(address _voterAddress) public {
+    function registerVoter(address _voterAddress) public onlyOwner {
         bytes32 voterId = keccak256(abi.encodePacked(_voterAddress));
         require(voters[voterId].voterId == bytes32(0), "Voter is already registered.");
         voters[voterId] = Voter(voterId, false, bytes32(0));
