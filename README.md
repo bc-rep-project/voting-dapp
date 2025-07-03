@@ -14,6 +14,26 @@ pnpm dev
 bun dev
 ```
 
+## Configuration
+
+The application expects the deployed Voting contract address. You can supply it
+using an environment variable or the `contract.config.json` file. The environment
+variable takes precedence.
+
+1. Create a `.env.local` file in the project root with:
+
+```bash
+NEXT_PUBLIC_CONTRACT_ADDRESS=0xYourContractAddress
+```
+
+2. Or edit `contract.config.json` and update the `contractAddress` field:
+
+```json
+{
+  "contractAddress": "0xYourContractAddress"
+}
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.

@@ -6,6 +6,7 @@ import web3 from "../utils/web3";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Voting from "../contracts/Voting.json"; // Assuming ABI is available
+import { CONTRACT_ADDRESS } from "@/config";
 import "@/components/styles/VotingInterface.css";
 import Link from "next/link";
 
@@ -21,7 +22,7 @@ export default function VotingInterface() {
   const castVote = async (event: React.FormEvent) => {
     event.preventDefault();
     const accounts = await web3.eth.getAccounts();
-    const contract = new web3.eth.Contract(Voting.abi, "0x5FbDB2315678afecb367f032d93F642f64180aa3"); // Replace with your contract address
+    const contract = new web3.eth.Contract(Voting.abi, CONTRACT_ADDRESS);
 
     try {
       const voterId = web3.utils.soliditySha3({ type: "address", value: accounts[0] });
