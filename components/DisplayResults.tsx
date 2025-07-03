@@ -5,23 +5,28 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import "@/components/styles/DisplayResults.css";
+import web3 from "../utils/web3";
+import Voting from "../contracts/Voting.json";
+import { CONTRACT_ADDRESS } from "@/config";
 
 export default function DisplayResults() {
   const [results, setResults] = useState<{ candidate: string; votes: number }[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   const tallyVotes = async () => {
-
     try {
-      // Placeholder for tallying votes
-      // Decryption and counting logic to be implemented
-      // For now, we will mock the results
-      const mockResults = [
-        { candidate: "Alice", votes: 10 },
-        { candidate: "Bob", votes: 5 },
-        { candidate: "Charlie", votes: 3 },
-      ];
-      setResults(mockResults);
+      const accounts = await web3.eth.getAccounts();
+      const contract = new web3.eth.Contract(Voting.abi, CONTRACT_ADDRESS);
+      await contract.methods.tallyVotes().send({ from: accounts[0] });
+      const ids = (await contract.methods.getAllCandidates().call()) as string[];
+      const resultsData = await Promise.all(
+        ids.map(async (id) => {
+          const info = (await contract.methods.getCandidateInfo(id).call()) as [string, string, string];
+          const count = await contract.methods.voteCounts(id).call();
+          return { candidate: info[0], votes: Number(count) };
+        })
+      );
+      setResults(resultsData);
     } catch (error) {
       console.error("Error tallying votes:", error);
       setError("Error tallying votes. See console for details.");

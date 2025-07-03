@@ -89,6 +89,20 @@ describe("Voting Contract", function () {
     await expect(voting.tallyVotes()).to.not.be.reverted;
   });
 
+  it("Should return all registered voters", async function () {
+    await voting.registerVoter(addr1.address);
+    await voting.registerVoter(addr2.address);
+    const voters = await voting.getAllVoters();
+    expect(voters).to.deep.equal([addr1.address, addr2.address]);
+  });
+
+  it("Should return all candidates", async function () {
+    await voting.addCandidate("1", "Alice", "Desc", "url1");
+    await voting.addCandidate("2", "Bob", "Desc", "url2");
+    const candidates = await voting.getAllCandidates();
+    expect(candidates).to.deep.equal(["1", "2"]);
+  });
+
   it("Should allow a voter to cast a vote", async function () {
     await voting.registerVoter(addr1.address);
     const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
@@ -105,6 +119,20 @@ describe("Voting Contract", function () {
     await expect(
       voting.castVote(voterId, ethers.utils.formatBytes32String("2"))
     ).to.be.revertedWith("Voter has already voted.");
+  });
+
+  it("Should tally votes correctly", async function () {
+    await voting.addCandidate("1", "Alice", "Desc", "url1");
+    await voting.addCandidate("2", "Bob", "Desc", "url2");
+    await voting.registerVoter(addr1.address);
+    await voting.registerVoter(addr2.address);
+    const id1 = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
+    const id2 = ethers.utils.solidityKeccak256(["address"], [addr2.address]);
+    await voting.castVote(id1, ethers.utils.formatBytes32String("1"));
+    await voting.castVote(id2, ethers.utils.formatBytes32String("2"));
+    await voting.tallyVotes();
+    expect(await voting.voteCounts("1")).to.equal(1);
+    expect(await voting.voteCounts("2")).to.equal(1);
   });
 
   it("Should not allow unregistered voter to vote", async function () {
