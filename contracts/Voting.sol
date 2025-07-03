@@ -17,6 +17,8 @@ struct Candidate {
 contract Voting {
     mapping(bytes32 => Voter) public voters; // Mapping voterId to Voter struct
     mapping(string => Candidate) public candidates; // Mapping candidateId to Candidate struct
+    mapping(string => uint256) public candidateVotes; // Tracks vote count for each candidate
+    string[] public candidateIds; // Keep track of all candidate IDs for tallying
 
     event VoterRegistered(bytes32 voterId);
     event VoteCast(bytes32 voterId, bytes32 vote);
@@ -24,6 +26,8 @@ contract Voting {
 
     function addCandidate(string memory _candidateId, string memory _name, string memory _description, string memory _imageUrl) public {
         candidates[_candidateId] = Candidate(_candidateId, _name, _description, _imageUrl);
+        candidateIds.push(_candidateId);
+        candidateVotes[_candidateId] = 0;
     }
 
     function registerVoter(address _voterAddress) public {
@@ -38,13 +42,29 @@ contract Voting {
         require(!voters[voterId].hasVoted, "Voter has already voted.");
         voters[voterId].vote = encryptedVote;
         voters[voterId].hasVoted = true;
+
+        string memory candidateId = bytes32ToString(encryptedVote);
+        candidateVotes[candidateId] += 1;
         emit VoteCast(voterId, encryptedVote);
     }
 
+    function bytes32ToString(bytes32 _bytes32) internal pure returns (string memory) {
+        uint8 i = 0;
+        while(i < 32 && _bytes32[i] != 0) {
+            i++;
+        }
+        bytes memory bytesArray = new bytes(i);
+        for(uint8 j = 0; j < i; j++) {
+            bytesArray[j] = _bytes32[j];
+        }
+        return string(bytesArray);
+    }
+
     function tallyVotes() public {
-        // Placeholder for tallying votes
-        // Decryption and counting logic to be implemented
-        // Emit ResultsAnnounced event for each candidate
+        for (uint256 i = 0; i < candidateIds.length; i++) {
+            string memory id = candidateIds[i];
+            emit ResultsAnnounced(id, candidateVotes[id]);
+        }
     }
 
     function getCandidateInfo(string memory candidateId) public view returns (string memory, string memory, string memory) {
