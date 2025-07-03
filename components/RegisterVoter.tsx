@@ -9,6 +9,7 @@ import "@/components/styles/RegisterVoter.css"; // Import custom CSS
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Voting from "../contracts/Voting.json"; // Assuming ABI is available
+import { CONTRACT_ADDRESS } from "@/config";
 import Link from "next/link"; // Import Link
 
 export default function RegisterVoter() {
@@ -22,8 +23,8 @@ export default function RegisterVoter() {
     console.log("Accounts fetched:", accounts);
      const contract = new typedWeb3.eth.Contract(
        Voting.abi,
-       "0x5FbDB2315678afecb367f032d93F642f64180aa3"
-     ); // Replace with your contract address
+       CONTRACT_ADDRESS
+     );
 
     try {
       await contract.methods.registerVoter(voterAddress).send({ from: accounts[0] });

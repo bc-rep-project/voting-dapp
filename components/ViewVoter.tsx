@@ -5,6 +5,7 @@ import { useState } from "react";
 import web3 from "../utils/web3";
 import { Button } from "@/components/ui/button";
 import Voting from "../contracts/Voting.json"; // Assuming ABI is available
+import { CONTRACT_ADDRESS } from "@/config";
 import "@/components/styles/ViewVoter.css";
 
 export default function ViewVoter() {
@@ -16,7 +17,7 @@ export default function ViewVoter() {
   } | null>(null);
 
   const fetchVoterDetails = async () => {
-    const contract = new web3.eth.Contract(Voting.abi, "0x5FbDB2315678afecb367f032d93F642f64180aa3"); // Replace with your contract address
+    const contract = new web3.eth.Contract(Voting.abi, CONTRACT_ADDRESS);
     try {
       const details = (await contract.methods.getVoterDetails(voterAddress).call()) as {
         address: string;
