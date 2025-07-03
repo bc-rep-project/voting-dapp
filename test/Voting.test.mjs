@@ -55,7 +55,16 @@ describe("Voting Contract", function () {
   });
 
   it("Should add a candidate", async function () {
-    await voting.addCandidate("1", "Alice", "Description of Alice", "http://example.com/alice.jpg");
+    await expect(
+      voting.addCandidate(
+        "1",
+        "Alice",
+        "Description of Alice",
+        "http://example.com/alice.jpg"
+      )
+    )
+      .to.emit(voting, "CandidateAdded")
+      .withArgs("1");
     const candidate = await voting.candidates("1");
     expect(candidate.candidateId).to.equal("1");
     expect(candidate.name).to.equal("Alice");
