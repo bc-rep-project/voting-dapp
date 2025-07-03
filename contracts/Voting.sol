@@ -1,6 +1,8 @@
 
 pragma solidity ^0.8.0;
 
+import "@openzeppelin/contracts/access/Ownable.sol";
+
 struct Voter {
     bytes32 voterId; // Unique identifier (hashed for anonymity)
     bool hasVoted;    // Flag to track voting status
@@ -14,7 +16,8 @@ struct Candidate {
     string imageUrl;    // URL of the candidate's image (can be IPFS hash later)
 }
 
-contract Voting {
+contract Voting is Ownable {
+    constructor() Ownable(msg.sender) {}
     mapping(bytes32 => Voter) public voters; // Mapping voterId to Voter struct
     mapping(string => Candidate) public candidates; // Mapping candidateId to Candidate struct
 
@@ -22,7 +25,7 @@ contract Voting {
     event VoteCast(bytes32 voterId, bytes32 vote);
     event ResultsAnnounced(string candidateId, uint256 voteCount);
 
-    function addCandidate(string memory _candidateId, string memory _name, string memory _description, string memory _imageUrl) public {
+    function addCandidate(string memory _candidateId, string memory _name, string memory _description, string memory _imageUrl) public onlyOwner {
         candidates[_candidateId] = Candidate(_candidateId, _name, _description, _imageUrl);
     }
 
@@ -41,7 +44,7 @@ contract Voting {
         emit VoteCast(voterId, encryptedVote);
     }
 
-    function tallyVotes() public {
+    function tallyVotes() public onlyOwner {
         // Placeholder for tallying votes
         // Decryption and counting logic to be implemented
         // Emit ResultsAnnounced event for each candidate

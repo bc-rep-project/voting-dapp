@@ -1,19 +1,48 @@
 
 import { expect } from "chai";
 import hardhat from "hardhat";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import solc from "solc";
 const { ethers } = hardhat;
 
 describe("Voting Contract", function () {
-  let Voting;
   let voting;
   let owner;
   let addr1;
   let addr2;
 
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+  function compileContract() {
+    const source = fs.readFileSync(path.join(__dirname, "../contracts/Voting.sol"), "utf8");
+    const input = {
+      language: "Solidity",
+      sources: {
+        "Voting.sol": { content: source },
+      },
+      settings: {
+        outputSelection: { "*": { "*": ["abi", "evm.bytecode"] } },
+      },
+    };
+    function findImports(importPath) {
+      const p = path.join("node_modules", importPath);
+      if (fs.existsSync(p)) {
+        return { contents: fs.readFileSync(p, "utf8") };
+      }
+      return { error: "File not found" };
+    }
+    const output = JSON.parse(solc.compile(JSON.stringify(input), { import: findImports }));
+    const contract = output.contracts["Voting.sol"].Voting;
+    return { abi: contract.abi, bytecode: "0x" + contract.evm.bytecode.object };
+  }
+
   beforeEach(async function () {
-    Voting = await ethers.getContractFactory("Voting");
-[owner, addr1, addr2] = await ethers.getSigners();
-    voting = await Voting.deploy();
+    const { abi, bytecode } = compileContract();
+    [owner, addr1, addr2] = await ethers.getSigners();
+    const factory = new ethers.ContractFactory(abi, bytecode, owner);
+    voting = await factory.deploy();
     await voting.deployed();
   });
 
@@ -32,6 +61,17 @@ describe("Voting Contract", function () {
     expect(candidate.name).to.equal("Alice");
     expect(candidate.description).to.equal("Description of Alice");
     expect(candidate.imageUrl).to.equal("http://example.com/alice.jpg");
+  });
+
+  it("Should not allow non-owner to add a candidate", async function () {
+    await expect(
+      voting.connect(addr1).addCandidate("2", "Bob", "Desc", "http://example.com/bob.jpg")
+    ).to.be.reverted;
+  });
+
+  it("Should restrict tallyVotes to owner", async function () {
+    await expect(voting.connect(addr1).tallyVotes()).to.be.reverted;
+    await expect(voting.tallyVotes()).to.not.be.reverted;
   });
 
   it("Should allow a voter to cast a vote", async function () {
