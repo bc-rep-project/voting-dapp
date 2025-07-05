@@ -36,7 +36,7 @@ export default function RegisterVoter() {
   };
 
   return (
-     <form onSubmit={registerVoter} className="register-voter-form">
+     <form onSubmit={registerVoter} className="glass-container register-voter-form">
        <h2 className="register-voter-title">Register Voter</h2>
        
        <div className="space-y-2">

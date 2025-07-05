@@ -27,7 +27,7 @@ export default function ViewAllVoters() {
   }, []);
 
   return (
-    <div className="view-all-voters-container">
+    <div className="glass-container view-all-voters-container">
       <h2 className="title">Registered Voters</h2>
       {error && <div className="error-message">{error}</div>}
       <ul className="voter-list">

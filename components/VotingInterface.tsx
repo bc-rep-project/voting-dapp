@@ -58,7 +58,7 @@ export default function VotingInterface() {
   };
 
   return (
-    <form onSubmit={castVote} className="form">
+    <form onSubmit={castVote} className="glass-container form">
       <h2 className="title">Cast Your Vote</h2>
       
       <div className="spacing">
