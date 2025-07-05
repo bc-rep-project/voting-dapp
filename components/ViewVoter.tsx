@@ -32,7 +32,7 @@ export default function ViewVoter() {
   };
 
   return (
-     <div className="view-voter-container">
+     <div className="view-voter-container glass-card">
       <h2 className="text-2xl font-bold text-center mb-6">View Voter Details</h2>
       <input
         type="text"
@@ -43,7 +43,7 @@ export default function ViewVoter() {
        />
        <Button onClick={fetchVoterDetails} className="view-voter-button">Fetch Details</Button>
        {voterDetails && (
-         <div className="view-voter-details">
+         <div className="view-voter-details glass-card">
            <h3>Voter Details:</h3>
            <p>Address: {voterDetails.address}</p>
            <p>Voted: {voterDetails.hasVoted ? "Yes" : "No"}</p>
