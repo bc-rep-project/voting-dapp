@@ -6,9 +6,12 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #f9f9f9;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: auto;
 }
