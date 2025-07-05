@@ -9,7 +9,8 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
 }
 
