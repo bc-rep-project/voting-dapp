@@ -25,7 +25,7 @@ export default function ConnectWallet() {
   };
 
   return (
-    <div className="container">
+    <div className="container glass">
         <div className="message">
             <h2>Why should you have MetaMask? 🤔</h2>
             <p>Wallet Connection: MetaMask allows users to connect their Ethereum wallet to the application. This is essential for interacting with the Ethereum blockchain, such as sending transactions and signing messages.</p>
