@@ -46,6 +46,10 @@ contract Voting is Ownable {
 
     function castVote(bytes32 voterId, bytes32 encryptedVote) public {
         require(voters[voterId].voterId != 0, "Voter is not registered.");
+        require(
+            keccak256(abi.encodePacked(msg.sender)) == voterId,
+            "Sender not authorized"
+        );
         require(!voters[voterId].hasVoted, "Voter has already voted.");
         voters[voterId].vote = encryptedVote;
         voters[voterId].hasVoted = true;

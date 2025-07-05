@@ -106,7 +106,9 @@ describe("Voting Contract", function () {
   it("Should allow a voter to cast a vote", async function () {
     await voting.registerVoter(addr1.address);
     const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
-    await voting.castVote(voterId, ethers.utils.formatBytes32String("1"));
+    await voting
+      .connect(addr1)
+      .castVote(voterId, ethers.utils.formatBytes32String("1"));
     const voter = await voting.voters(voterId);
     expect(voter.hasVoted).to.equal(true);
     expect(voter.vote).to.equal(ethers.utils.formatBytes32String("1"));
@@ -115,10 +117,22 @@ describe("Voting Contract", function () {
   it("Should not allow a voter to vote twice", async function () {
     await voting.registerVoter(addr1.address);
     const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
-    await voting.castVote(voterId, ethers.utils.formatBytes32String("1"));
+    await voting
+      .connect(addr1)
+      .castVote(voterId, ethers.utils.formatBytes32String("1"));
     await expect(
-      voting.castVote(voterId, ethers.utils.formatBytes32String("2"))
+      voting
+        .connect(addr1)
+        .castVote(voterId, ethers.utils.formatBytes32String("2"))
     ).to.be.revertedWith("Voter has already voted.");
+  });
+
+  it("Should not allow a different account to vote using another voterId", async function () {
+    await voting.registerVoter(addr1.address);
+    const voterId = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
+    await expect(
+      voting.connect(addr2).castVote(voterId, ethers.utils.formatBytes32String("1"))
+    ).to.be.revertedWith("Sender not authorized");
   });
 
   it("Should tally votes correctly", async function () {
@@ -128,8 +142,12 @@ describe("Voting Contract", function () {
     await voting.registerVoter(addr2.address);
     const id1 = ethers.utils.solidityKeccak256(["address"], [addr1.address]);
     const id2 = ethers.utils.solidityKeccak256(["address"], [addr2.address]);
-    await voting.castVote(id1, ethers.utils.formatBytes32String("1"));
-    await voting.castVote(id2, ethers.utils.formatBytes32String("2"));
+    await voting
+      .connect(addr1)
+      .castVote(id1, ethers.utils.formatBytes32String("1"));
+    await voting
+      .connect(addr2)
+      .castVote(id2, ethers.utils.formatBytes32String("2"));
     await voting.tallyVotes();
     expect(await voting.voteCounts("1")).to.equal(1);
     expect(await voting.voteCounts("2")).to.equal(1);
