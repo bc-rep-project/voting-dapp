@@ -34,7 +34,7 @@ export default function DisplayResults() {
   };
 
   return (
-    <div className="container">
+    <div className="container glass-card">
       <h2 className="title">Election Results</h2>
 
       {error && <div className="error-message">{error}</div>}

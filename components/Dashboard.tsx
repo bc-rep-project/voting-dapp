@@ -22,7 +22,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-container glass-card">
       <h1 className="dashboard-title">Dashboard</h1>
       <div className="button-grid">
         <Link href="/components/connect-wallet">
